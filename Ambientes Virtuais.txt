@@ -1,9 +1,0 @@
-Ele serve para ter outras versões do Python instaladas no computador, bem como os módulos e pacotes
-específicos para um projeto só. É bem útil também para:
-
-	- Usar ferramentas que funcionam apenas com versões específicas do Python
-	- Isolar de todo o resto tudo aquilo que é estritamente necessário para o programa
-	rodar. Importante para sites e programas que vão ser distribuídos.
-
-Ao criar um ambiente virtual, ele vem praticamente sem nada, então é necessário usar o pip ou conda
-para instalar cada pacote que for usar.
