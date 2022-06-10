@@ -1,0 +1,17 @@
+SINTAXE
+
+lista = [expressão/ação for item in iterable if condição]
+
+EXEMPLO
+
+preço_produtos = [100, 150, 300, 5500]
+produtos = ['vinho','cafeteira','microondas','iphone']
+
+imposto = [preço * 0.3 for preço in preço_produtos]
+
+
+Aqui ele está fazendo um for em uma linha apenas, para simplificar o código. Fuciona também com funções
+
+CASO HAJA UMA CONDIÇÃO IF... ELSE
+
+lista = [expressão/ação if condição else outro_resultado for item in iterable]

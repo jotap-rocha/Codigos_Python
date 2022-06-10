@@ -1,0 +1,6 @@
+Todo comando começa com self.
+
+Vá no BotStudio e clique em Documentation -> BotCity Framework Python -> Abre uma página com a lista dos
+códigos
+
+self.execute('local do programa que você quer abrir\programa.extensão') -> Abre o programa desejado

@@ -1,0 +1,33 @@
+* LENDO O ARQUIVO *
+
+variavel = pd.read_excel('nome do arquivo', 'nome da aba') -> Lê o arquivo e a aba especificados
+variavel = pd.read_csv('nome do arquivo', sep='separador_que_aparecer',decimal,header, usecols=[],
+nrows=int, index_col=int) -> Lê o arquivo csv e já separa as colunas direitinho a partir do separador passado
+	
+	- decimal -> Passa para o pandas que a vírgula dentro das células é um decimal
+	- header -> Especifica qual linha do csv será usada como nome de coluna apenas
+	- use_cols -> Define quais colunas vão para o dataframe
+	- nrows -> Define a quantidade de linhas que irão compor o dataframe
+	- index_col -> Seta para o pandas que a coluna passada já é um index
+
+* LENDO UM ARQUIVO DA INTERNET *
+
+url = 'link de onde está o arquivo'
+dataframe = pd.read_csv(url) -> Ele lê o arquivo direto da internet, porém nem sempre esse método funciona
+
+* CRIANDO ARQUIVO EXCEL E CSV *
+
+dataframe.to_excel('Nome do Arquivo.xlsx', 'Planilha1', index=False) -> Cria um arquivo excel com os dados
+montados
+
+	- index -> Não passa o índice para o excel
+
+dataframe.to_csv(r'caminho_do_arquivo.csv',sep=';') -> Cria um arquivo csv que armazena o seu dataframe
+
+* CRIANDO UM DATAFRAME A PARTIR DE UM DICT *
+
+dataframe = pd.dataframe.from_dict(data=dict, orient='index') -> Transforma seu dicionário em um dataframe
+Lembre de passar o encoding latin1, caso não funcione, use outro encoding.
+
+	index -> Passa as chaves do dict para o index
+

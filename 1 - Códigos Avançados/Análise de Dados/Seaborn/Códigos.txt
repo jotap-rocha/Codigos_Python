@@ -1,0 +1,55 @@
+variavel = sb.heatmap(dados, cmap='codigo_cor',xticklabels(opcional), 
+yticklabels(opcional), annot(opcional), cbar(opcional), cbar_kws(opcional)) -> Cria o mapa de calor
+
+	dados -> variável que guarda os dados para comporem o mapa de calor
+	cmap -> parâmetro de cor do mapa
+	xticklabels=False -> parâmetro que retira as coordenadas do eixo x 
+	yticklabels=False -> parâmetro que retira as coordenadas do eixo y
+	annot=True -> parâmetro que adiciona texto em cima do mapa
+	cbar=False -> parâmetro que retira a barra de cores lateral
+	cbar_kws={'label': 'Nome', 'orientation': 'horizontal'} -> parâmetro
+	que adiciona um título a barra de cores lateral e realoca ela, no mapa,
+	horizontalmente
+
+sns.scatterplot(data='', x='', y='', hue='', style='', palette='',s=int,xlim=(),ylim=(),figsize=()) -> Gera um
+gráfico de dispersão
+
+	data -> Dataframe
+	x, y -> Coordenada
+	hue -> Faz um agrupamento, comparação, diferenciando os dados por cor
+	style -> Usa símbolo diferente na coluna passada, a qual pode ser igual a que foi
+	passada para o parâmetro hue
+	palette -> Cor do gráfico, se for mais de uma cor, inserir um dicionário contendo
+	as cores
+	- s ou size -> Aumenta ou diminui o tamanho do ponto no gráfico scatter de dispersão
+	- xlim e ylim -> São limites no eixo, estabelecidos pelo próprio programador, delimitando o início e
+	final
+	- figsize -> Tamanho da figura
+
+sns.relplot(data='', x='', y='', hue='', col='') -> Gera um gráfico de dispersão relacional
+	
+	data -> Dataframe
+	x, y -> Coordenada
+	hue -> Faz um agrupamento, comparação, diferenciando os dados por cor
+	col -> Gera colunas, de acordo com as parâmetros passados
+
+sns.distplot(data=df, ax=eixo, kde=bool, hist=bool) -> Gráfico de distribuição baseado na curva KDE (Kernel
+Density Estimation)
+
+	- data -> Recebe o dataframe
+	- ax -> Indica para qual eixo o gráfico deve ser plotado
+	- kde -> Insere a curva KDE
+	- hist -> retorna o histograma do gráfico
+
+sns.kdeplot(df, shade=bool) -> Plota um kde univariado
+
+	- shade -> Sombreamento
+
+variavel.set_titles('Título: {alguma variável}') -> Printa os valores de 'col' conforme você quiser
+sns.set_style('nome_cor') -> Aponta o estilo de cor que o seaborn vai utilizar
+
+plt.xlabel('Valores eixo X') -> Descrição no eixo X
+plt.ylabel('Valores eixo y') -> Descrição no eixo y
+sns.palplot(sb.mpl_palette('cor', int:quantidade de cores) -> Cria uma paleta de
+cores 
+sns.set(font_scale=int) -> Ajusta o tamanho da fonte no texto

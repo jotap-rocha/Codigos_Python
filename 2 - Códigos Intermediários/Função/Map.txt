@@ -1,0 +1,11 @@
+lista = list(map(função, iterable_original))
+
+O map aplica uma função em toda lista de uma vez só
+
+def potencia(num, pot=2): função que aplica um cálculo de potência que por padrão é 2.
+  return num**pot
+
+lista [1,2,3,4,5]
+list(map(potencia, lista)) -> Aplica a potência em cada elemento da lista
+
+Saída: [1,4,9,16,25]

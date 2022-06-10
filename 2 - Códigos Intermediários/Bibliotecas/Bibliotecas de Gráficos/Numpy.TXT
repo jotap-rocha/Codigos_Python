@@ -1,0 +1,2 @@
+np.random.randint(int=inicio, fim, qtd) -> Randomiza números do início ao fim na quantidade desejada
+np.arange(int=inicio, fim) -> Gera uma lista com o inicio e o fim passados

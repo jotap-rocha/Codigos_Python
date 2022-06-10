@@ -1,0 +1,3 @@
+as px
+
+px.nome_algum_tipo_de_grafico(dados, x='coluna1',color='pode ser cor definida ou alguma coluna de referencia')

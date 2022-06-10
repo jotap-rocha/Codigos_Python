@@ -1,0 +1,9 @@
+pygame.mixer.init()
+pygame.mixer.music.load('musica.mp3') Função para tocar música
+pygame.mixer.music.play()
+while(pygame.mixer.music.get_busy()): pass
+
+OU
+
+import playsound
+playsound.playsound('musica.mp3')

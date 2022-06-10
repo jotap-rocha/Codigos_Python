@@ -1,0 +1,3 @@
+from operator impor itemgetter
+dicionário2 = sorted(dicionário1.items(), key=itemgetter(1)) -> Ordena o 
+dicionário de acordo com o valor que há dentro da chave

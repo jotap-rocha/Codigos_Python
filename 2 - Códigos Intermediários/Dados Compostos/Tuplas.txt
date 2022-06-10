@@ -1,0 +1,10 @@
+variavel.index(dado buscado) -> Mostra em qual posição está guardado o dado 
+dentro da variável fornecida
+sorted(variável) -> Organiza em ordem a sua tupla
+del(variável) -> Deleta a tupla
+
+*FUNÇÕES*
+variavel = len(variavel1) -> Recebe o tamanho
+variavel = max(variavel1) -> Recebe o maior
+variavel = min(variavel1) -> Recebe o menor
+variavel = sum(variavel1) -> Recebe a soma

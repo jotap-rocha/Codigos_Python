@@ -1,0 +1,27 @@
+np.float32 -> Transforma os dados de determinada coluna em float32, que é melhor do que apenas float, pois
+deixa a memória mais tranquila, não pesa tanto
+
+np.array(obj) -> Retorna um array de alguma coisa
+
+np.ones(int) -> Retorna a quantidade passada em número 1, caso o parâmetro fosse 2, ele ia retornar [1,1]
+
+np.empty(int) -> Retorna um array vazio, porém não completamente vazio
+
+np.linspace(inicio:int,fim:int,qtd:int) -> Retorna um array com início, fim e quantidade de itens
+
+np.matrix(variavel que contenha uma matriz) -> monta um matriz
+
+np.shape(variavel) -> Formato/Dimensão da matriz
+
+np.mean(variavel) -> Calcula a média da matriz
+
+np.std(variavel) -> Calcula um desvio padrão que existe em relação a média 
+ou valor esperado
+
+np.corrcoef(variavel1, variavel2) -> Retorna uma matriz 2x2 das duas variáveis
+e suas correlações. Somente pode ser usada com duas variáveis apenas.
+
+np.var(variavel) -> Calcula a variância
+
+np.arange(inicio, fim, passo) -> Cria números do início até o fim indo de tanto em tanto de acordo com o passo
+np.sin(variavel) -> Retorna o seno da variavel

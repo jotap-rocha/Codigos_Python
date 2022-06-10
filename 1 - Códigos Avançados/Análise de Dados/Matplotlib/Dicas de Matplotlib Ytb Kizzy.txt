@@ -1,0 +1,4 @@
+https://www.youtube.com/watch?v=RXbX6giU2vI&list=PL5TJqBvpXQv5N3iV68bGBkea0HjMk98lR&index=6
+
+Ela plota um gráfico em linh em cima de um dataframe agrupado por estado e resposta de questões e ela explica
+o código unspack() o qual ajuda a plotar estes dados agrupados.

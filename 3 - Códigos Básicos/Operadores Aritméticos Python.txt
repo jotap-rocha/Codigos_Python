@@ -1,0 +1,11 @@
++ = soma
+- = subtração
+* = multiplicação
+/ = divisão
+** = potencialização
+// = divisão inteira
+% = resto da divisão
+número**(1/2) = raiz quadrada
+bin() = binário
+oct() = octal
+hex() = hexadecimal

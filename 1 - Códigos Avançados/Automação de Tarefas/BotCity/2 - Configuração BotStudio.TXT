@@ -1,0 +1,11 @@
+1º - Vá na pasta onde baixou o BotStudio e abra o arquivo .bat
+
+2º - Ao entrar no programa do BotStudio, vá em File -> New Project
+
+3º - Nomeie o projeto, selecione a pasta onde está o projeto criado pelo Pycharm, SourceCode é o código fonte a
+pasta do seu bot, resourcesfolder fica dentro da pasta do bot em uma pasta chamada resources
+
+4º - Clique em Create
+
+Agora todos os códigos do Pycharm estão aparecendo no BotStudio e vice-versa, agora estamos prontos para começar
+a codar o robô

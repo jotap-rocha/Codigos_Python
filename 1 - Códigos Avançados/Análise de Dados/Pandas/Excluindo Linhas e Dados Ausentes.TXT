@@ -1,0 +1,30 @@
+*** CONFIRMANDO A EXISTÊNCIA DE DADOS AUSENTES ***
+
+dataframe.apply(lambda x: sum(x.isnull()), axis=0) -> Retorna quantos valores faltantes há
+na coluna
+
+dataframe.isnull().sum() -> Também retorna a quantidade de dados ausentes
+
+pd.isnull(dataframe['coluna']) -> Essa função deve ser recebida por uma variável e ela retorna as linhas
+que tem dados ausentes identificados
+
+*** COMANDOS PARA TRATAR DADOS AUSENTES ***
+
+colunaDataFrame.fillna(ColunaDataFrame, inplace=True) -> Substitui os valores faltantes por zero
+colunaDataFrame.fillna(ColunaDataFrame.mean(), inplace=True) -> Substitui os valores faltantes pela
+média
+dataframe.fillna('Nome que deseja substituir', inplace=True) -> Substitui os valores ausentes por
+algo que você deseja
+dataframe.ffill() -> Preenche com o último valor
+
+*** COMANDOS PARA EXCLUIR LINHAS ***
+
+dataframe.drop_duplicates() -> Remove as duplicatas
+dataframe.drop(['coluna1'], axis=1) -> Removendo uma coluna específica
+dataframe.drop([1]) -> Removendo a primeira linha
+dataframe.drop(variavel.index[[0, 1]]) -> Removendo linhas com fatiamento
+dataframe.drop(variavel.index[[-1]]) -> Removendo a última linha, a qual não se tem conhecimento
+
+dataframe.dropna(subset=['coluna'], axis=0 ou 1, inplace=True) -> Remove a linha (0) ou coluna (1) que 
+tenha algum dado ausente desejada. Executando dropna() ele exclui linhas que tenham pelo menos um dado ausente
+dataframe.dropna(how='all', axis=0 ou 1) -> Exclui todos os valores ausentes presentes

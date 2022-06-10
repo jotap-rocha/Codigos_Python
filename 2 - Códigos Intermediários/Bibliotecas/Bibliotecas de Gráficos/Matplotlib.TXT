@@ -1,0 +1,25 @@
+import matplotlib.pyplot as plt
+
+GRÁFICO EM LINHA
+
+plt.plot(x, y, ls, color) -> Captura o gráfico da variável por linha. Pode ser passado uma lista
+de itens para serem plotados nos eixos do gráfico
+
+	- x -> Posição do gráfico no eixo x
+	- y -> Posição do gráfico no eixo y
+	- ls -> Estilo da linha (ro, r--, bs, g^, bo, go)
+	- color -> Altera a cor do gráfico, pode ser passado uma lista de cores também
+
+GRÁFICO DISPERSÃO
+
+plt.scatter() -> Cria um gráfico de dispersão com os mesmos kwargs que o de linha
+
+GRÁFICO EM BARRA
+
+plt.bar() -> Cria um gráfico em barra com os mesmos kwargs que o de linha
+
+
+plt.show() -> Exibi o gráfico
+plt.ylabel('texto') -> Exibe um texto no eixo y
+plt.xlabel('texto') -> Exibe um texto no eixo x
+plt.axis([xmin, xmax, ymin, ymax]) -> Essse método limita o seu gráfico

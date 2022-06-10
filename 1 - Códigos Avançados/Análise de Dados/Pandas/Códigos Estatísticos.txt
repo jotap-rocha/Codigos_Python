@@ -1,0 +1,19 @@
+*** TENDÊNCIA CENTRAL ***
+
+df.mean() -> Retorna a média da coluna do dataframe
+df.median() -> Retorna a mediana da coluna do dataframe
+df.mode() -> Retorna a moda da coluna do dataframe
+df.var() -> Retorna a variância da coluna do dataframe
+df.std() -> Retorna o desvio padrão da coluna do dataframe
+df.quantile(float) -> Retorna os quantis da coluna, parâmetro: 0.25, 0.5 e 0.75
+
+Intervalo Interquartil -> Diferença entre o terceiro e o primeiro quartil. Medidad de dispersão robusta muito
+utilizada quando os dados têm muitos outliers por ser menos sensível às variações
+
+*** HISTOGRAMA ***
+
+Um histograma é uma visualização gráfica de dados usando barras de diferentes alturas. Em um histograma, cada
+barra agrupa números em intervalos. As barras mais altas mostram que mais dados estão nesse intervalo. Um
+histograma exibe a forma e distribuição de dados amostrais discretos ou contínuos.
+
+sns.distplot(df) -> 

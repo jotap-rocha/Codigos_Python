@@ -1,0 +1,21 @@
+calendar.setfirstweekday(int:dia da semana) -> Altera o primeiro dia da semana,
+que por padrão é segunda, para domingo
+
+calendar.firstweekday() -> Chama o primeiro dia da semana
+
+calendar.calendar(ano, w=2, l=1, c=6) -> Retorna o calendário do ano vigente
+calendar.isleap(ano) -> Retorna True se o ano for bissexto, senão False.
+calendar.leapdays(ano1, ano2) -> Retorna um número total de anos bissextos dentro
+do intervalo
+
+calendar.month(int:ano, int:mês, w=2, l=1) -> Retorna o calendário do mês 
+informado
+
+calendar.monthcalendar(int:ano, int:mês) -> Retorna uma lista contendo semanas e
+uma sublista contendo os dias de cada semana
+
+calendar.monthrange(int:ano, int:mês) -> Retorna o dia da semana (de 0 a 6) e o
+total de dias no mês
+
+calendar.weekday(int:ano, int:mês, int:dia) -> Retorna, em inteiro, o dia da
+semana

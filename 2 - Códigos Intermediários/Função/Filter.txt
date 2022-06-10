@@ -1,0 +1,13 @@
+Parecida com o map e sua finalidade é retornar todos os itens do iterable onde a função é True
+
+SINTAXE
+
+filter(funcao, iterable) -> Retorna todos os itens do iterable onde a função é True
+
+def checar_par(num):
+    return num% 2 == 0
+
+
+lista1 = [2,4,6,8]
+
+list(filter(checar_par, lista1))

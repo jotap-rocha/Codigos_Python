@@ -1,0 +1,25 @@
+RANGE
+
+for c in range(tamanho): -> Começa de um tamanho específico
+for c in range(inicio, fim): -> Começa de onde você quiser e termina onde você quiser
+for c in range(inicio, fim, passo): -> Começa de onde você quiser e termina onde você quiser
+pulando de tantos em tantos números que você quiser
+
+set = {valor1, valor2, valor3} -> Como uma lista, porém não aceita valores duplicados e nem
+possui ordem fixa, pois não tem index
+
+set(variavel) -> Transforma a lista em set(tupla desordenada e sem duplicatas)
+
+*** ZIP ***
+
+zip -> Consegue executar interações entre listas, uma espécie de relação entre o primeiro item de uma lista
+com o primeiro item de uma outra lista e assim por diante
+
+ex: lista1: [1,2,3]
+lista2: [-1,-2,-3]
+
+list(zip(lista1, lista2))
+
+Saída: [(1,-1),
+	(2,-2),
+	(3,-3)]

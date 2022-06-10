@@ -1,0 +1,15 @@
+12:03 PM 12/9/2021
+
+pd.pivot_table(data='', index='', values='', columns='', aggfunc='', fill_value=0, margins=bool)
+
+	DATA -> Parâmetro onde passa o dataframe
+	INDEX -> Parâmetro onde podemos indexar por coluna, é criado uma referência
+	VALUES -> Parâmetro onde passamos uma coluna para realizar uma agregação
+	COLUMNS -> Forma adicional de segmentar os valores efetivos, também realiza agregação
+	AGGFUNC-> Parâmetro onde passamos funções matemáticas que serão aplicadas nos valores,
+	ou definidos pelo desenvolvedor, ou definidos pelo próprio pandas. Caso seja mais de uma
+	função, as mesmas deverão ser passadas através de uma lista.
+	FILL_VALUE -> Parâmetro que podemos remover os valores NaN ao atribuir 0 ao mesmo
+	MARGINS -> True revela os números totais do dataframe, False(padrão) não revela
+
+table.query('coluna == ["item dentro da coluna"]') -> Filtro 

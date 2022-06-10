@@ -1,0 +1,33 @@
+*** INICIALIZAÇÃO ***
+
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
+navegador = webdriver.Chrome('Chromedriver')
+
+		Essas linhas de códigos irão inicializar o navegador no seu computador
+
+
+Caso queira instalar o selenium via código
+
+from selenium.webdriver.chrome.service import Service
+serviço = Service(ChromeDriverManager().install())
+navegador = webdriver.Chrome(serviço)
+
+*** PEGANDO UM SITE ***
+
+objeto.get('url') -> Captura o link do site e abre no navegador
+
+*** SELECIONANDO ELEMENTOS ***
+
+from selenium.webdriver.common.by import By
+objeto.find_element(By.ID ou o que vc quer localizar, 'nome do item') -> Captura um item somente
+objeto.find_elements(By.ID ou o que vc quer localizar, 'nome do item') -> Captura vários itens e retorna em
+forma de lista
+objeto.send_keys('texto') -> Escreve no campo desejado
+objeto.click() -> Clica no botão desejado
+objeto.get_attribute('atributo') -> Seleciona o atributo desejado
+
+*** SELECIONANDO POR TAG ***
+
+objeto.find_element(By.TAG_NAME, 'nome da tag').text -> Captura o texto da tag

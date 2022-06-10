@@ -1,0 +1,9 @@
+2:13 PM 12/9/2021
+
+variavel[['colunas']].groupby(as_index=boolean)['coluna2'].agg(função) -> A variável vai ser aplicada um groupby, um método
+para juntar itens dentro de um dataframe.
+
+	COLUNA1 -> São os itens que serão como index.
+	COLUNA2 -> Será a coluna onde aplicaremos alguma função para dar resultado ao groupby.
+	AGG -> Onde passamos funções a serem aplicadas. Pode ser passado uma lista de função.
+	- as_index -> Transforma as colunas clusterizadas em colunas normais.

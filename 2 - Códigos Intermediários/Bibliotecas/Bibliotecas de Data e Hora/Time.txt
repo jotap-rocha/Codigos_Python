@@ -1,0 +1,16 @@
+time.sleep(segundos determinados) = faz o programa "dormir" pelo
+tempo determinado
+
+time.altzone -> Algo relacionado ao fuso horário
+time.asctime(variavel ou time.localtime()) -> Retorna uma tupla com o dia da
+semana, mês, dia do mês, hora, minuto, segundo e ano
+
+time.clock() -> Retorna o tempo de processamento da CPU
+time.gmtime() -> Retorna a estrutura ano, mês, dia do mês, hora, minuto,
+segundo, dia da semana, dia do ano e fuso horário 
+
+time.localtime() -> Retorna a hora local
+time.mktime() -> Retorna um número de compatibilidade com time(um vínculo para
+ser usado com time.localtime())
+
+time.time() -> Retorna os segundos contados desde 1970

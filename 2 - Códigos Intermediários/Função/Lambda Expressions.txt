@@ -1,0 +1,15 @@
+- São funções anônimas que tem uma linha de código e são atribuídas a uma variável
+- Geralmente são usadas para fazer uma única ação, mas em Python é usada como ARGUMENTO DE MÉTODOS
+para não precisar criar uma função para isso
+- Outra aplicação é para criar um "gerador de funções"
+
+SINTAXE
+
+variavel = lambda parametro: expressão
+
+EXEMPLO
+
+minha_funcao = lambda num: num * 2
+print(minha_funcao(5))
+
+SAÍDA: 10

@@ -1,0 +1,20 @@
+print('='*20) = ele irá escrever "=" 20 vezes
+{:20}.format(variável) = Ele usará 20 espaços para escrever
+{:>20}.format(variável) = Alinhamento a direita
+{:<20}.format(variável) = Alinhamento a esquerda
+{:^}.format(variável) = Centraliza
+{:=^}.format(variável) = Centraliza e o espaço que estiver em branco será preenchido pelo "="
+f'{"Nome":<4}' -> Alinhado a esquerda com 4 casas
+{:.3f} = Formata o número para aparecer até 3 casas
+decimais
+{:+} -> Coloca o sinal na frente do número, independente de negativo ou positivo
+{:,} -> Vírgula como separador de milhar
+{:_} -> Underline como separador de milhar
+{:e} -> Formato científico
+{:%} -> Formato percentual
+, end='' = não quebra a linha 
+\n = quebra de linha
+r'Antes de qualquer texto' = o python lê o texto
+exatamente como foi escrito
+f'Texto com variável {variável}' = O python digita 
+seu texto junto com a variável que você informou

@@ -1,0 +1,2 @@
+datetime.datetime.today().year = ele pega a data atual e ano do pc
+https://www.alura.com.br/artigos/lidando-com-datas-e-horarios-no-python?gclid=Cj0KCQiAsqOMBhDFARIsAFBTN3fM9vpuJ_RRvtWUppXCVeN-w_y5XhAg20Tji-9RP0WSmh3Np9aypd4aAvhjEALw_wcB

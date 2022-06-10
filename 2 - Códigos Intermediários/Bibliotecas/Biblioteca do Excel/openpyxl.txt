@@ -1,0 +1,14 @@
+Permite a manipulação de arquivos Excel
+
+from openpyxl import workbook, load_workbook
+
+workbook -> Método que permite a criação de um arquivo Excel
+load_workbook -> Método que carrega os dados de uma planilha já criada
+
+load_workbook('nomedoarquivo.xlsx') -> Lê o arquivo
+planilha.active -> Captura a planilha em uso
+variavel.value -> Captura o conteúdo dentro da célula
+variavel.row -> Retorna a linha
+variavel.collum -> Retorna a coluna
+
+variavel.save -> Salva o arquivo

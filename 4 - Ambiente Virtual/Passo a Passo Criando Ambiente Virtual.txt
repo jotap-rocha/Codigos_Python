@@ -1,0 +1,9 @@
+1° passo - Criar uma pasta comum onde estão os seus projetos
+
+2° passo - Abrir o cmd e navegar até essa pasta
+
+3° passo - Criar um abiente virtual dentro dela
+
+4° passo - Instalar módulos e outras ferramentas que você deseja utilizar
+
+5° passo - Ativar o ambiente

@@ -1,0 +1,17 @@
+CRIAR AMBIENTE VIRTUAL
+conda create -n meuambientevirtual
+python3 -m venv nome_do_ambiente
+
+CRIAR AMBIENTE VIRTUAL COM VERSÃO ESPECÍFICA DO PYTHON
+conda create -n meuambientevirtual python=3.6
+
+REMOVER UM AMBIENTE VIRTUAL
+conda remove --name meuambientevirtual --all
+
+ATIVAR UM AIMBIENTE VIRTUAL
+conda activate meuambientevirtual
+cd nome_do_ambiente // cd Scripts // activate
+
+DESATIVAR UM ABIENTE VIRTUAL
+conda deactivate
+cd nome_do_ambiente // cd Scripts // deactivate

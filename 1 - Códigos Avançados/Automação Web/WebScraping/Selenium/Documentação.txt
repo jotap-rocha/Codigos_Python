@@ -1,0 +1,3 @@
+https://selenium-python.readthedocs.io/
+
+https://www.selenium.dev/pt-br/documentation/webdriver/

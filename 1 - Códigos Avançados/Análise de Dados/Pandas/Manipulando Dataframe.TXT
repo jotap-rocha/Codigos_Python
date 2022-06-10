@@ -1,0 +1,107 @@
+*** CRIANDO COLUNAS E LINHAS ***
+
+dataframe['coluna_nova'] = operação -> Ele verifica se a coluna existe, caso não exista, ele cria
+dataframe.loc[:, 'coluna_nova'] = dado -> Caso a base seja grande, melhor usar essa forma para criar
+
+dataframe = dataframe.append(novo_dataframe) -> Adiciona as linhas no final do dataframe original
+
+*** ALTERANDO COLUNAS ***
+
+df.columns = [] -> Altera o nome das colunas na quantidade desejada
+
+dataframe.rename(columns={'nome da coluna que deseja mudar': 'Novo nome da coluna'}, inplace=True) ->
+Troca o nome da coluna desejada por um novo nome de sua escolha, inplace garante a mudança diretamente
+no dataframe ao invés de apenas gerar uma cópia
+
+*** LOCALIZANDO LINHAS E COLUNAS ***
+
+dataframe.loc[linha, coluna] -> Localiza linha e coluna no dataframe
+	- linhas -> 5 (linha específica), 5:7 (da linha 5 até a 6, 7 não aparece) ou filtro também
+	- colunas -> ['coluna1','coluna2','coluna3']
+
+dataframe.iloc[int] -> Localiza linha e coluna pelo número da linha
+
+*** ÍNDICES ***
+
+dataframe.set_index('coluna1',inplace=True) -> Utiliza a coluna do dataframe indicada para ser index
+dataframe['nome_do_index'] = dataframe.index -> Cria um index para o dataframe
+*** APLICANDO FUNÇÃO EM COLUNAS ***
+
+dataframe.apply(np.sqrt) -> Aplica raiz quadrada no dataframe
+dataframe.apply(np.sum) -> Soma a coluna inteira do dataframe
+dataframe['coluna1'].apply(np.sqrt) -> Aplica raiz quadrada na coluna desejada, somente
+dataframe['coluna1'].sum() -> Soma coluna1 toda
+dataframe['coluna1'].nunique() -> Conta valores reais únicos
+dataframe['coluna1'].unique() -> Captura valores reais únicos
+dataframe['coluna1'].count() -> Conta quantos valores há na coluna coluna1
+dataframe.duplicated() -> Percorre o dataframe e discrimina as duplicatas
+
+*** ORDENAÇÃO DOS DADOS NO DATAFRAME ***
+
+dataframe.sort_values(by=['coluna1']) -> Ordena coluna1 de forma crescente
+dataframe.sort_values('coluna1') -> Ordena coluna1 de forma crescente
+dataframe.sort_values(by=['coluna1'],ascending=False) -> Ordena coluna1 de forma decrescente
+
+*** PERCORRENDO COLUNAS E LINHAS ***
+
+for linha in dataframe.index: -> Você percorre as linhas do seu dataframe
+for coluna in dataframe: -> Você percorre todas as colunas do seu dataframe
+
+*** FILTROS ***
+
+variavel = dataframe.loc[dataframe['coluna'] == 'qualquer'] -> Filtra os valores no seu dataframe
+variavel = dataframe.loc[(dataframe.coluna == 'qualquer')] -> Filtra os valores no seu dataframe
+variavel = dataframe['coluna'] = 'qualquer' -> Filtra os valores no seu dataframe
+dataframe.filter(items=[]) -> Filtra o dataframe por colunas selecionadas e com isso da uma enxugada
+
+*** LISTAS DE CONTAGENS ***
+
+df.Coluna.value_counts().plot(kind='tipo de gráfico') -> Realiza as contagens dentro da coluna e plota em
+gráfico para visualização
+
+dataframe['coluna'].value_counts(normalize=True) -> Lista e conta os valores que estão na coluna. O
+parâmetro normalize=True retorna porcentagem
+
+dataframe['coluna'].value_counts(normalize=True).map('{:.1%}'.format) -> Lista e conta os valores que
+estão na coluna. O parâmetro normalize=True retorna porcentagem formatada
+
+df1 == df2.value_counts() -> Retorna o verdadeiro/falso das linhas, com isso conseguimos descobrir similaridades
+em duas colunas
+
+dataframe['coluna'].value_counts().sort_index() -> Ordena o series pelo index, não pelo resultado
+
+*** JOIN ENTRE TABELAS ***
+
+novo_dataframe = dataframe1.merge(dataframe2,on='chave estrangeira') -> Cria um novo dataframe com a junção
+dos dataframes passados, junto de suas colunas
+
+
+*** JUNTANDO DOIS SERIES OU DUAS TABELAS COM AS MESMAS COLUNAS ***
+
+pd.concat([series1, series2], join='palavra-chave', axis=int, ignore_index=boolean, keys=?, levels=int,
+names=str, verify_integrity=boolean, sort=boolean, copy=boolean) -> Junta os dois series/dataframe em um só
+
+	- join -> Método de junção, palavra-chave é inner ou outer
+	- axis -> Concatena linha ou coluna, 0 para linha e 1 para coluna
+	- ignore_index -> Ignora os índices do dataframe original
+	- keys -> Sequência para adicionar um identificador aos índices de resultados
+	- levels -> Quantidade de níveis no multiIndex
+	- names -> Nomes para o multiIndex
+	- verify_integrity -> Verifica se há duplicatas
+	- sort -> Classifica o eixo se ainda não estiver alinhado quando for inner ou outer
+	- copy -> Evita cópia desnecessária de dados
+
+*** ALTERANDO O TIPO DE DADO ***
+
+dataframe['coluna1'] = dataframe['coluna1'].astype(str) -> Transforma todos os valores da coluna em str
+dataframe['coluna1'] = dataframe['coluna1'].astype(int) -> Transforma todos os valores da coluna em int
+df.['coluna'] = pd.to_numeric(df['coluna'], errors='coerce') -> Transforma os dados da coluna em número
+
+*** MANIPULANDO DATA ***
+
+dataframe = pd.to_datetime(dataframe, format='%d/%m/%Y) -> Transforma o mês em data
+dataframe = dataframe.dt.year -> Passa o ano, para mês e dia é só alterar o year
+dataframe = pd.to_datetime(dataframe).dt.date -> Transforma os dados somente em data
+dataframe['coluna'].dt.year -> Captura o ano
+dataframe['coluna'].dt.month -> Captura o mês
+dataframe['coluna'].dt.day -> Captura o dia

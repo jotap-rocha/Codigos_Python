@@ -1,0 +1,26 @@
+Código
+
+\033[style;text;backm
+       |    |     |
+   negrito cor    cor
+   inverte  do    de
+Sublinhado texto  fundo
+
+Códigos style: 0, 1(negrito), 4(sublinhado) e 7(inverte)
+
+Códigos cor: 30(preto), 31(vermelho), 32(verde), 33(amarelo),
+34(azul), 35(roxo), 36(ciano), 37(cinza) e 97(branco)
+
+Códigos de fundo: 40(preto), 41(vermelho), 42(verde), 43(amarelo),
+44(azul), 45(roxo), 46(ciano), 47(cinza) e 107(branco)
+
+ex: \033[0;30;41m ; \033[30;42m ; \033[m
+
+a = 3
+b = 5
+print('\033[7;33;44mOlá, Mundo!\033[m')
+print('Os valores são \033[31;m{}\033[m e \033[36;m{}\033[m!'.format(a, b))
+print('Olá! Muito prazer em te conhecer, {}{}{}!!!'.format('\033[31m', nome, '\033[m'))
+
+cores = {'limpa':'\033[m','azul':'\033[34m','vermelho':'\033[31m','preto':'\033[30m'}
+print('Olá! Muito prazer em te conhecer, {}{}{}!!!'.format(cores['vermelho'], nome, cores['limpa']))

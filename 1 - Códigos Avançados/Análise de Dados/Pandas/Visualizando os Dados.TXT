@@ -1,0 +1,32 @@
+* VISUALIZAÇÃO DA BASE DE FORMA GERAL *
+
+dataframe.head() -> Pega as 5 primeiras linhas
+
+dataframe.tail() -> Pega as 5 últimas linhas
+
+dataframe.shape -> Retorna linhas e colunas do dataframe. Da para fazer unpacking e dar um print legal
+
+dataframe.describe() -> Fornece contagem, média, desvio padrão, mínimo, quartis e máximo
+
+dataframe.info(memory_usage='deep') -> Retorna informações a respeito da quantidade de dados, do tipo de
+dados e se há valores nulos. O parâmetro retorna quanto de memória está sendo utilizada.
+
+dataframe.columns.values -> Retorna uma lista com o nome de todas as colunas do dataframe.
+
+* VALORES MÁXIMOS E MÍNIMOS *
+
+dataframe.max() -> Retorna o valor máximo na coluna
+
+dataframe.idmax() -> Retorna o index que possui o maior valor
+
+dataframe.min() -> Retorna o valor mínimo na coluna
+
+dataframe.idmin() -> Retorna o index que possui o menor valor
+
+*** CATEGORIAS ***
+
+df.dtypes -> Retorna as colunas e o tipo de dado que há nelas
+df.select_dtypes(include='number') -> Retorna os int's e float's do seu dataframe
+df.select_dtypes(include='object') -> Retorna as strings do seu dataframe
+df.select_dtypes(include=['int','datetime','object']) -> Retorna múltiplos tipos de dados do seu dataframe
+df.select_dtypes(exclude='int') -> Exclui certos tipos de dados do seu dataframe

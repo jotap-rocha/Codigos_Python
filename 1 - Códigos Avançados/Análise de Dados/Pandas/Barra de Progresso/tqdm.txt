@@ -1,0 +1,11 @@
+Permite criar uma barra de progresso de processamento
+
+from tqdm import tqdm
+
+pbar = tqdm(total=len(coluna_dataframe), position=0, leave=True)
+
+	- total -> É o máximo onde a barra vai
+	- position -> É onde ela vai começar
+	- leave -> Carrega de porcento em porcento, não de 0 a 100
+
+pbar.update() -> Atualiza o progresso da barra

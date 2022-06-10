@@ -1,0 +1,16 @@
+1º - Entrar no site do botcity (https://us01.l.antigena.com/l/PSX8HBKkHdV7yZFa_8oLyJBMrY3vmwZiAqmK7dYSFEg-~EM2a4hUFSsC1enSLMZ-s115tVz08fdpfbTXoca7g1bEyQlEQc-lo~PyGHk-j1~gdHqxsjsiltiDpuGp7XHN3M2f8k)
+
+2º - Baixar o BotStudio em "Download BotStudio"
+
+3º - No prompt, instale o cookiecutter, o qual permite iniciar o código de projeto em um template de outra
+plataforma -> pip install cookiecutter
+
+4º - Importe o template, escreva no prompt -> cookiecutter https://github.com/botcity-dev/bot-python-template
+
+5º - Selecione o tipo de projeto -> Para a aula da hashtag selecione 1 - Desktop
+
+6º - Passe o id do bot, um nome para ele, nome do projeto e descrição do projeto
+
+7º - Instale o bot -> pip install -e local_do_arquivo_onde_está_o_setup
+
+8º - Verifique se há o arquivo nome_que_voce_deu.egg-info e o bot.py

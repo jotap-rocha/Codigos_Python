@@ -1,0 +1,7 @@
+int(variavel) -> Converte a variável em inteiro
+float(variavel) -> Converte a variável em número real
+repr(variavel) -> Converte a variável em uma cadeia de expressão
+dict(variavel) -> Cria um dicionário
+chr(variavel) -> Converte a variável em caractere
+ord(variavel) -> Converte a variável em um único caractere em seu valor inteiro
+hex(variavel) -> Converte a variável(número) em uma sequência hexadecimal

@@ -1,0 +1,6 @@
+If variável > condição:
+comandos
+else:
+comandos
+
+comando if variável <= condição else comando

@@ -1,0 +1,7 @@
+Códigos style: 0, 1(negrito), 4(sublinhado) e 7(inverte)
+
+Códigos cor: 30(preto), 31(vermelho), 32(verde), 33(amarelo),
+34(roxo), 35(rosa) e 36(azul)
+
+Códigos de fundo: 40(preto), 41(vermelho), 42(verde), 43(amarelo),
+44(roxo), 45(rosa), 46(azul), 47(branco) e 107(branco)

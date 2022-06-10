@@ -1,0 +1,44 @@
+*PEGANDO A URL DO SITE*
+from urllib.request import urlopen
+
+variavael = urlopen() -> captura o código HTML da página
+variavel.read() -> Retorna o código
+
+		OU
+
+import requests
+url = 'url do site' -> Salvar a url do site em alguma variável
+variavel = requests.get(url) -> Salvar o código html da página em uma variável
+variavel.text -> Retornar o código html para usuário
+
+
+from bs4 import BeautifulSoup
+variavel = BeautifulSoup(variaveln, 'fonte do código, em html é lxml')
+variavel.decompose() -> Remove a tag desejada. Para funcionar, a variável precisa
+receber a instância de 
+variavel.find('dado buscado') -> Retorna a primeira ocorrência do dado
+variavel.find_all('dado buscado') -> Retorna todas as ocorrências do dado buscado
+variavel.find_all('dado buscado', limit=1) -> Retorna o número de ocorrências,
+do dado buscado, iguais ao limit
+
+variavel.select('tags, ex: "div strong input" ') -> Procura por tags dentro do
+código html, basta você passar para ele as tags
+
+variavel.select('.classe desejada') -> Retorna todas as classes desejadas dentro
+do código html
+
+variavel.select('#id desejado') -> Retorna todos os ids desejados dentro do 
+código html
+
+
+from urllib.error import HTTPError, URLError
+
+try:
+	variavel = urlopen('url do site') -> Captura a url do site
+except HTTPError as variavel2:
+	print(variavel2)	-> Se ocorrer algum erro de código html ele printa
+				o erro
+
+except URLError as variavel2:
+	print('Servidor não encontrado!') -> Se o site não for achado, retorne
+					     "Servidor não encontrado!"

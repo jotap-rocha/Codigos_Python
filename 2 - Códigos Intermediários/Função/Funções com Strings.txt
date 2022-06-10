@@ -1,0 +1,61 @@
+print ("""TEXTO ENORME""") -> ele vai escrever exatamente como vc escreveu
+
+*Alinhamento*
+variavel.ljust(tamanho que vc deseja) -> justificando a esquerda
+variavel.center(tamanho que vc deseja) -> centraliza
+variavel.rjust(tamanho que vc deseja) -> justifica a direita
+
+*Fatiamento*
+Variavel[índice] -> ele vai pegar a letra no índice indicado e escrever na tela
+Variavel[índice:índice:2] -> Ele vai escrever as letras nos respectivos
+índices, porém pulando de dois em dois
+Variavel[:índice] -> Ele pega do 0 até o índice informado
+Variavel[índice:] -> Ele pega do índice até o final, não informado
+Variavel[índice::3] -> Ele pega do índice informado até o final, pulando de 3
+em 3
+
+*Análise*  
+len(variavel) -> Conta a string que está guardada na variavel
+
+variavel.count('o') -> conta quantas vezes tem a letra "O" dentro da string armazenada na variavel
+
+variavel.count('o', 0, 13) -> Analisa do indice 0 ao 13 quantas letras "O" existem
+
+variavel.endswith('letra', 0, 13) -> Analisa se a string dentro da variável termina com o seu sufixo, ao passar os parâmatros de início e fim, ele vai
+analisar somente o intervalo fornecido.
+
+variavel.startswith('letra', 0, 13) -> Analisa se a string dentro da variável começa com a letra passada, ao passar os parâmatros de início e fim, ele
+vai analisar somente o intervalo fornecido.
+
+variavel.find('deo') -> localiza onde ele encontrou "deo" dentro da string
+
+variavel.find('android') -> se a string não existe ele retorna "-1"
+
+'Curso' in variavel -> ele retorna True ou False para a existencia da string na variavel
+
+sorted(variável) -> Organiza em ordem a sua tupla
+
+del(variável) -> Deleta a tupla
+
+variavel.index(dado buscado) -> Mostra em qual posição está guardado o dado dentro da variável fornecida
+
+
+*Transformação*
+variavel.replace('Python', 'Android') -> Ele trocar o 'Python' por 'android'
+variavel.upper() -> transforma a string em maiuscula
+variavel.lower() -> transforma a string em minuscula
+variavel.capitalize() -> transforma a primeira string em minuscula e mantém, 
+apenas, a primeira letra em maiúscula
+variavel.title() -> analisa quantas palavras existem e depois atua como o 
+capitalize
+variavel.strip() -> remove espaços inuteis no final e no inicio da string
+variavel.rstrip() -> remove somente espaços do lado direito
+variavel.lstrip() -> remove somente espaços do lado esquerdo
+
+*Divisão*
+variavel.split('letra') -> divide a string, considerando os espaços(sempre zera o indice
+no começo de cada palavra). No parâmetro, podemos passar para a função para quebrar sempre que achar o
+parâmetro no objeto da função.
+
+*Junção*
+''.join(variavel) -> gera uma string unica sem espaços entre elas

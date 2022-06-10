@@ -1,0 +1,37 @@
+CRIAR UMA LISTA
+variavel = list()
+variável = list(range(4, 11)) -> Cria uma lista da posição 4 até 10	
+
+ADICIONAR
+lista.append('elemento') -> Adiciona um item na lista, em seu espaço final
+lista.insert(0, 'elemento') -> Adiciona um item na posição indicada e "joga" os
+outros itens para a direita
+lista1.extend(lista) -> Adiciona a segunda lista a primeira
+
+MANIPULAÇÃO
+max(lista) -> Retorna o valor máximo
+min(lista) -> Retorna o valor mínimo
+print(','join(lista)) -> Imprime a lista com o delimitador escolhido
+
+COPIAR
+ListaB = ListaA[:] -> Recebe somente os itens e não cria ligação entre as listas
+
+ORDENAR
+lista.sort() -> Ordena a lista original em ordem crescente e te permite passar funções
+lista.sort(key = function, reverse=True) -> Ordena em ordem decrescente; Key aplica uma
+função nesse método
+sorted(lista) -> Gera uma lista ordenada de forma crescente
+
+REMOVER
+lista.clear() -> Limpa a lista
+del lista(3) -> Deletar o item, na posição 3, da lista. Útil quando sabemos a 
+posição do elemento
+lista.pop() -> Deleta o último item da lista, porém você pode passar uma posição
+específica para ser retirada
+lista.remove('elemento') -> Indica o item a ser eliminado, útil quando não sabemos
+onde o elemento está. Após esse processo, os itens são reposicionados dentro da 
+lista
+
+IGUALAR
+ListaB = ListaA -> ListaB recebe A, com isso é criado um vínculo entre as duas
+listas, no qual ao alterar uma, você altera a outra também

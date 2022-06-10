@@ -1,0 +1,4 @@
+From Counter
+
+variavel = Counter(dicionario) -> Captura uma lista dos maiores valores no dicionário
+variavel.most_commom(int) -> Retorna a lista capturada e o int é a quantidade de itens a ser retornado

@@ -1,0 +1,59 @@
+10:11 AM 11/1/2021
+
+*CRIANDO DOCUMENTAÇÃO*
+def soma(num1, num2, num3):
+""" Aqui você descreve a sua função, seu parâmetros e tudo o que ela é
+capaz de fazer, quanto mais destrinchado a sua explicação for, melhor"""
+
+Parameters:
+	num1 (int): primeiro número a ser somado
+	num2 (int): segundo número a ser somado
+	num3 (int): terceiro número a ser somado
+
+Returns:
+	soma (int): o valor da soma dos 3 números dados como argumento
+
+*PARÂMETROS OPCIONAIS*
+def soma(a=0, b=0, c=0)
+	s=a+b+c
+
+
+somar(5,7,2) ou pode ser também somar(5, 7) ou também somar()
+
+help(função) -> Retorna a documentação da função
+
+*** PARÂMENTROS INDEFINIDOS ***
+
+def soma_varios(*args):
+    soma = sum(args)
+    return soma
+
+soma_varios(1)
+soma_varios(1,2,3)
+
+Retorna a soma das duas funções igualmente
+
+*** KWARGS ***
+
+De forma análoga ao *args, o **kwargs torna a função capaz de receber argumentos que tem um nome
+
+# No caso abaixo, o nome do argumento é 'acao'
+
+def compra_de_acoes(**kwargs):
+    if 'acao' in kwargs:
+        print('A ação comprada foi ', kwargs['acao'])
+    else:
+        print('O cliente não investe em ações')
+
+compra_de_acoes(acao = 'PETR4')
+
+Saída: A ação comprada foi PETR4
+
+compra_de_acoes(teste='PETR')
+
+Saida: O cliente não investe em ações
+
+
+*** FUNÇÃO HELP ***
+
+help(função) -> Retorna a documentação da função

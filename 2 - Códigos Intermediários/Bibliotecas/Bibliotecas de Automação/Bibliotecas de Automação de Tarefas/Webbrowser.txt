@@ -1,0 +1,3 @@
+Serve para exibir informações da web para o usuário
+
+webbrowser.open('url do site') -> Abre o navegador no site desejado

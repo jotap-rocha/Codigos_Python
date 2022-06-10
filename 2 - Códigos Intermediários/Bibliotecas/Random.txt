@@ -1,0 +1,8 @@
+random.random = número aleatório de 0 a 1 flutuante
+random.randint(1, 10) = número aleatório inteiro
+de 1 a 10
+random.choice = escolhe um elemento dentro de uma
+lista
+random.shuffle = embaralha uma lista
+random.sample(range(0, até a posição que vc quiser), quantos números serão
+randomizados) -> Randomiza números sem repetir

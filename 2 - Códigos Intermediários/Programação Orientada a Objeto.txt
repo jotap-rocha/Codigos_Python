@@ -1,0 +1,39 @@
+class NomeDaClasse(ClassePai, ClassePai2, etc):
+	'Docstring opcional'
+	VariaveisDeClasse
+
+	def __init__(self, *args):
+		self.args = args
+		NomeDaClasse.VariavelDeClasse = operação qualquer
+
+	def método(self):
+		operação
+
+Essa parte de baixo você segue com a programação normal
+
+
+**********************************************************************************
+
+*FUNÇÕES*
+getattr(obj, argDaClasse) -> Acessa o atributo do objeto
+hasattr(obj, argDaClasse, valor) -> Verifica se o atributo existe ou não
+delattr(obj, argDaClasse) -> Exclui o atributo
+issubclass(sub, sup) -> Retorna True se a subclasse fornecida realmente for
+subclasse da superclasse fornecida
+
+isinstance(obj, class) -> Retorna True se o objeto for uma instância da classe
+fornecida
+
+*MÉTODOS DE SOBRECARGA DE BASE*
+__init__(self, args) -> Construtor
+__del__(self) -> Destruidor
+__repr__(self) -> Representação de string avaliada
+__str__(self) -> Representação de string imprimível
+__cmp__(self, x) -> Comparação de objetos
+
+*OPERADORES DE PONTO*
+__dict__ -> Dicionário que contém espaço para nome de classe
+__doc__ -> Docstring da classe
+__name__ -> Nome da classe
+__module__ -> Nome do módulo no qual a classe está definida
+__bases__ -> Uma tupla que contém as classes base

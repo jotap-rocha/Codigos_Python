@@ -1,0 +1,30 @@
+try:
+	linhas de códigos
+except:
+	linhas de códigos
+
+----------------------------------------------------------------------------------------------------------------
+
+try:
+	tente isso
+except:
+	caso dê erro
+else:
+	caso não dê o erro esperado
+finally:
+	independente do que acontecer, faça isso
+
+
+CASO VOCÊ QUEIRA SABER O QUE HÁ DE ERRADO EM UMA LINHA ESPECÍFICA
+
+
+try:
+	linhas de códigos
+except:
+	raise Exception(Descreva o erro)
+
+PRINCIPAIS TIPOS DE ERRO
+
+raise TypeError('instrução') -> Quando o tipo de dados está errado str -> int
+raise ValueError('instrução') -> Quando o valor está errado, você quer fazer algum cálculo impossível
+raise ZeroDivisionError('instrução') -> Quando é tentado fazer uma divisão por zero

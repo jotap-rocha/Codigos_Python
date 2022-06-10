@@ -1,0 +1,4 @@
+* CÓPIA DE PASTA *
+
+shutil.copy(arquivo, arquivo_copiado) -> Copia o arquivo passado para outro lugar, sempre através do path
+shutil.move(arquivo, arquivo_movido) -> Move o arquivo passado para outro lugar, sempre através do path

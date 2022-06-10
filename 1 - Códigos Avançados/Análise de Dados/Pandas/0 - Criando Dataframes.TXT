@@ -1,0 +1,30 @@
+* CRIANDO UM DATAFRAME DE UMA COLUNA SEM NOME PARA AS COLUNAS *
+
+lista = ['a','b','c']
+df = df = pd.DataFrame(lista) -> Cria um dataframe com números nas colunas e índices
+
+* CRIANDO UM DATAFRAME DE UMA COLUNA COM COLUNAS NOMEADAS *
+
+lista = ['a','b','c']
+df = pd.DataFrame(lista,columns=['nome']) -> Cria um dataframe com números nos índices apenas
+
+* CRIANDO UM DATAFRAME DE DUAS COLUNAS *
+
+lojas = ['Amazon','Buscapé','Americanas','Lojas Leitura','Submarino','Promobit']
+preços = [62.99,54.89,54.89,84.90,54.89,42.45]
+
+df = pd.DataFrame(list(zip(lojas, preços)), columns = ['Lojas','Preços']) -> Cria um dataframe com duas
+									colunas, relacionando-as com as
+									listas passadas
+
+* CRIANDO UM DATAFRAME DE TRÊS COLUNAS OU MAIS *
+
+lista = [['João',22,'Data Scientist'],['Fabiano',30,'DBA']]
+df = pd.DataFrame(lista,columns=['Nome','Idade','Cargo'])
+
+*** CRIANDO UM DATAFRAME ***
+
+df = pd.DataFrame(variavel, inddex=['coluna1','coluna2', 'coluna3']) -< Cria um dataframe com colunas já
+indexadas.
+
+AO DIGITAR UM NOME DE COLUNA QUE NÃO EXISTA, O PANDAS AUTOMATICAMENTE CRIA ESSA COLUNA NO DATAFRAME

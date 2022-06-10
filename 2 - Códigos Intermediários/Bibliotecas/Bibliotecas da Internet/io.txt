@@ -1,0 +1,4 @@
+Atualmente, uso para me ajudar a organizar os dados da internet e codificar de forma correta
+
+variavel = io.stringIO(conteudo_url.decode('latin1')) -> Transforma a informação embaralhada em um dataframe
+devidamente codificado

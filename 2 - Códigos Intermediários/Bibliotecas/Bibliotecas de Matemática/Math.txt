@@ -1,0 +1,6 @@
+ceil = arredonda pra cima
+floor = arredonda pra baixo
+trunc = elimina da vírgula pra frente
+pow = potencia
+sqrt = raiz quadrada
+factorial = fatorial

@@ -1,0 +1,5 @@
+9:57 AM 3/3/2022
+
+https://seaborn.pydata.org/tutorial/color_palettes.html
+
+coolwarm -> Escala de cor indo do azul até o vermelho

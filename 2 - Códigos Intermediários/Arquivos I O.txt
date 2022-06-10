@@ -1,0 +1,42 @@
+PARA LER OU GRAVAR COISAS EM UM ARQUIVO DEVEMOS ABRI-LO USANDO A FUNÇÃO OPEN()
+
+variavel = open(nome_do_arquivo, modo_de_acesso, buffer-opcional)
+
+OU
+
+with open('nome do arquivo.txt','modo_de_acesso') as variavel:
+	...
+	...
+
+* MODO DE ACESSO *
+	r -> Somente leitura
+	rb -> Abre um arquivo para leitura apenas em formato binário
+	r+ -> Abre um arquivo para leitura e gravação
+	rb+ -> Abre um arquivo para leitura e gravação em formato binário
+	w -> Abre um arquivo somente para gravação
+	wb -> Abre um arquivo para gravação em formato binário
+	w+ -> Abre um arquivo para escrever e ler
+	wb+ -> Abre um arquivo para ler e escrever em formato binário
+	a -> Abre um arquivo para anexar
+	ab -> Abre um arquivo para anexar em formato binário
+	a+ -> Abre um arquivo para anexar e ler
+	ab+ -> Abre um arquivo para anexar e ler em formato binário
+
+variavel.write('texto a ser inserido no arquivo') -> Escreve algo no arquivo
+variavel.close() -> Fecha o arquivo
+file.mode() -> Retorna o modo de acesso ao arquivo
+file.name() -> Retorna o nome do arquivo
+variavel.read(int:parametro opcional) -> Retorna a leitura de dentro do arquivo,
+caso haja um parâmetro, então ele se limitará ao número referenciado
+variavel.readlines() -> Retorna cada linha do txt como um item de uma lista
+
+variavel.tell() -> Retorna a posição em que o ponteiro se encontra no arquivo
+variavel.seek(int: reposicionar) -> Reposiciona o ponteiro no arquivo
+
+PARA RENOMEAR OU EXCLUIR ARQUIVOS DEVE SER USADO O MÓDULO "OS"
+
+os.rename('Nome do arquivo.txt', 'Novo nome do arquivo.txt') -> Renomeia
+os.remove('Nome do arquivo.txt') -> Remove o arquivo
+os.mkdir('Nome do diretório') -> Cria um diretório
+os.getcwd() -> Exibe o diretório trabalhado
+os.rmdir('Caminho do diretório') -> Remove o diretório 

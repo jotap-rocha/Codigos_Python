@@ -1,0 +1,62 @@
+*DECLARANDO UM DICIONÁRIO*
+variável = dict() -> Declara o dicionário
+variável = {} -> Declara o dicionário
+dici = {}.fromkeys(['chave1', 'chave2', 'chave3'], 0) -> Cria as chaves informadas
+e já aloca, somente um, valor a essas chaves
+
+Dicionário.key() -> Retorna o "índice" do dicionário
+Dicionário.values() -> Retorna o valor da chave
+Dicionário.items() -> Retorna o conjunto chave-valor
+
+*ADICIONAR*
+Dicionário['key nova'] = 'algum valor' -> Cria uma nova chave com um novo valor
+Dicionário['key existente'] = 'algum valor' -> Substitui um valor que já existia
+
+*CÓPIA*
+Dicionário.copy() -> Copia o dicionário
+
+*BUSCA*
+Dicionário.get('Chave buscada', 'Mensagem de erro') -> Busca de alguma chave,
+caso não seja achada ele retorna a mensagem desejada.
+dicionário.get('Chave buscada') -> Se a chave não existir ele retorna "None"
+dicionario.has_key('Chave desejada') - Retorna True se a chave buscada existe
+no dicionário e False caso contrário
+print(1 in quadrado) -> Retorna True, caso a chave buscada exista, ou False,
+caso a chave não exista. Só funciona para chave, não para valor.
+
+lista = zip(lista1, lista2) -> Transforma as listas em listas de tuplas
+novo_dicionario = dict(lista) -> Agora, as duas listas se tornam um dicionário
+
+*APAGAR*
+Dicinoário.pop('Chave buscada', 'Mensagem de erro') -> O método pop, nesse caso,
+busca pela chave e deleta, mas se não achar retorna a mensagem desejada.
+del dicionário['key'] -> Deleta uma chave específica
+
+*UPDATE*
+Dicionário.update(dicionário2) -> Adiciona pares de valores-chave do dicionário2
+ao dicionário.
+
+*ORDENAÇÃO*
+sorted(dicionário) -> Ordena pela chave, não pelo valor
+
+*ORDENANDO UM DICIONÁRIO TOMANDO COMO PARÂMETRO O VALOR, NÃO A CHAVE*
+from operator import itemgetter
+dici = dict()
+dici = 5 valores
+ordenar = dict()
+ordenar = sorted(dici.items(), key=itemgetter(1))
+
+Com isso, o dicionário fica ordenado tomando como base o valor, caso queira
+do maior para o menor, basta adicionar o "reverse = True", precedido por 
+vírgula depois do itemgetter.
+
+*FUNÇÕES*
+all(dicionário) -> Retorna True se todas as keys do dicionário forem True
+ou se o dicionário estiver vazio. (Se tiver algum 0, então é False)
+any(dicionário) -> Retorna True se qualquer key do dicionário for verdadeira.
+Se o dicionário estiver vazio, retorna False
+len(dicionário) -> Retorna o comprimento do dicionário
+dicionario['posição'] = len(variavel) -> Recebe o tamanho
+dicionario['posição'] = max(variavel) -> Recebe o maior
+dicionario['posição'] = min(variavel) -> Recebe o menor
+dicionario['posição'] = sum(variavel) -> Recebe a soma

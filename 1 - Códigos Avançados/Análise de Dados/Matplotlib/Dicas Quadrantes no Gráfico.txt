@@ -1,0 +1,8 @@
+https://www.youtube.com/watch?v=AugVEge2C9E&list=PL5TJqBvpXQv5N3iV68bGBkea0HjMk98lR&index=11
+
+Neste vídeo, foi gerado um gráfico de dispersão, o scatter, porém o plot dele não retornou qualquer informação
+relevante. A solução proposta foi gerar quadrantes no gráfico para analisar melhor.
+
+A solução atendeu ao problema, foi gerado os quadrante e conseguimos ter uma noção melhor de como os dados
+estavam distribuidos. A youtuber gerou quadrantes, alinhou os eixos e compartilhou entre os gráficos, adicionou
+cor para a diferença ficar maior e com isso, podemos analisar e ter conclusões mais assertivas e precisas.

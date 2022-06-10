@@ -1,0 +1,3 @@
+Requisita os pedidos nos links de internet e torna possível a extração de dados da mesma
+
+variavel = requests.get(url).content -> Captura o link e suas informações

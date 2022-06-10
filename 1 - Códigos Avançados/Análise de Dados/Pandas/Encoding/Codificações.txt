@@ -1,0 +1,6 @@
+Caso a importação da base não funcione por problemas de code use alguns desses argumentos:
+
+- encoding = 'latin1'
+- encoding = 'ISO-8859-1'
+- encoding = 'utf-8
+- encoding = 'cp1252'

@@ -1,0 +1,15 @@
+10:44 AM 12/21/2021
+
+df = pd.DataFrame(variaveis)
+correlaçao = df.corr(method='spearman') -> Parâmetro opcional que altera o método utilizado para o cálculo
+seaborn.heatmap(correlaçao, annot=True(exibe valores coeficientes de correlação no gráfico))
+
+OUTRO MÉTODO
+
+df = pd.DataFrame(variaveis)
+dataframe['coluna1']ou[['coluna1','coluna2']].corr().plot() -> Plota a correlação em gráfico de linha
+
+Esse código constrói um mapa de calor que correlaciona as colunas, tomando como parâmetro as linhas, que
+são os coeficientes de correlação no gráfico
+
+variavel = correlaçao.unstack() -> Retorna uma representação de cada valor por mais de um índice.

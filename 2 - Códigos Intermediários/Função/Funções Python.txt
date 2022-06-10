@@ -1,0 +1,15 @@
+variável.issapce() = verifica se há somente espaços
+variável.isnumeric() = verifica se há somente números
+variável.isalpha() = verifica se há somente letras
+variável.isalnum() = verifica se há letras e números
+variável.isupper() = verifica se há somente maiúsculas
+variável.islower() = verifica se há somente minúsculas
+variável.istitle() = verifica se está capitalizada
+variável.isdecimal() -> Retorna True se uma string contiver apenas caracteres
+decimais
+round(variavel ou cálculo, qtd casas decimais=int) -> Arredonda o número já na variável
+tuple('o que você quiser inserir na tupla') -> Inserção de dados dentro de uma 
+tupla. Variáveis não são aceitas
+variavel.mean() -> Retorna a média
+variavel.median() -> Retorna a mediana
+variavel.mode()[0] -> Retorna a moda, o valor mais frequente

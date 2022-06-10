@@ -1,0 +1,6 @@
+pyautogui.click(111, 111)
+pyautogui.alert('O programa irá iniciar')
+pyautogui.position() -> Testa a posição de click
+pyautogui.keydown('ctrl')
+pyautogui.keyup('ctrl')
+pyautogui.press('enter')
