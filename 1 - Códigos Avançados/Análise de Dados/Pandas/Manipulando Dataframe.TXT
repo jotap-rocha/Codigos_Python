@@ -5,6 +5,11 @@ dataframe.loc[:, 'coluna_nova'] = dado -> Caso a base seja grande, melhor usar e
 
 dataframe = dataframe.append(novo_dataframe) -> Adiciona as linhas no final do dataframe original
 
+*** COPIANDO UM DATAFRAME ***
+
+copia = df.copy() -> Copia o dataframe para outra variável, a fim de que as alterações feitas no dataframe
+original não alterem a cópia
+
 *** ALTERANDO COLUNAS ***
 
 df.columns = [] -> Altera o nome das colunas na quantidade desejada
@@ -25,6 +30,7 @@ dataframe.iloc[int] -> Localiza linha e coluna pelo número da linha
 
 dataframe.set_index('coluna1',inplace=True) -> Utiliza a coluna do dataframe indicada para ser index
 dataframe['nome_do_index'] = dataframe.index -> Cria um index para o dataframe
+
 *** APLICANDO FUNÇÃO EM COLUNAS ***
 
 dataframe.apply(np.sqrt) -> Aplica raiz quadrada no dataframe

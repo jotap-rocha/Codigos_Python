@@ -4,4 +4,5 @@ os.rename('Nome do arquivo.txt', 'Novo nome do arquivo.txt') -> Renomeia
 os.remove('Nome do arquivo.txt') -> Remove o arquivo
 os.mkdir('Nome do diretório') -> Cria um diretório
 os.getcwd() -> Exibe o diretório trabalhado
-os.rmdir('Caminho do diretório') -> Remove o diretório 
+os.chdir(variavel) -> Altera o diretório trabalhado, o qual é exibido por getcwd
+os.rmdir('Caminho do diretório') -> Remove o diretório
