@@ -1,0 +1,3 @@
+Lista de strings válidas para serem passadas para as funções press, keydown, keyup e hotkey
+
+link -> pyautogui.readthedocs.io/en/latest/keyboard.html#keyboard-keys

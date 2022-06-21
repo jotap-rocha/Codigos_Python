@@ -1,0 +1,11 @@
+write(text, interval=float) -> Escreve o texto e pode dar um delay de tempo enquanto escreve
+
+press(botão específico ou uma lista de botões, interval=float) -> Pressiona um botão do teclado
+ou
+press(botão específico, presses=int, interval=float) -> Pressiona um botão do teclado
+
+keydown(tecla específica) -> Pressiona tecla específica
+keyup(tecla específica) -> Solta tecla específica
+
+hotkey(tecla específica) -> Bom para utilizar com atalhos. Ex: hotkey('ctrl','shift','esc')
+

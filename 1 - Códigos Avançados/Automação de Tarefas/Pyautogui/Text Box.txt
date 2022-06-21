@@ -1,0 +1,17 @@
+alert(text, title, button) -> Gera simplesmente um alerta na sua tela e retorna o texto do botão
+
+	- text -> O texto que sairá na sua text box
+	- title -> Título da sua text box
+	- button -> Nome personalizável do botão
+
+confirm(text, title, buttons=list) -> Gera uma confirmação na sua tela e retorna o texto do botão
+
+	- buttons -> Lista de botões que o método irá gerar
+
+prompt(text, title, default) -> Gera uma caixa de resposta para o usuário, que retornará o texto da resposta
+
+	- default -> Onde o usuário irá digitar uma resposta
+
+password(text, title, default, mask='*') -> Gera um confirmador de senha, mascarado com "*"
+
+	- Os parâmetros tem o mesmo significado dos anteriores

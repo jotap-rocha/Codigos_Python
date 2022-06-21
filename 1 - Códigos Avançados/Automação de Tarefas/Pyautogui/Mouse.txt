@@ -1,0 +1,20 @@
+size() -> Retorna o tamanho da sua tela
+
+position() -> Testa a posição de click, bom para capturar a posição exata que você deseja clicar
+
+onScreen(x, y ou tupla/lista) -> Retorna True ou False se os limites estão dentro da tela
+
+moveTo(x, y, duration=float) -> Move o cursor do mouse até os pontos x e y passados
+
+move(x, y, duration=float) -> Move o cursor do mouse em relação ao ponto atual
+
+dragTo(x, y, duration=float, button=string) -> Clicar, segurar e arrastar com o mouse
+
+	- button -> Qual botão será utilizado [right, left, middle].
+
+click(x, y, button, clicks=int, interval=float) -> Utiliza o mouse para clicar em qualquer ponto da sua tela
+doubleClick() -> Dois cliques com o botão esquerdo
+tripleClick() -> Três cliques com o botão esquerdo
+rightClick() -> Clique com o botão direito
+
+scroll(int, x, y) -> Move o scroll do mouse e, opcionalmente, move o cursor para posições específicas
