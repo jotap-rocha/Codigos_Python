@@ -50,14 +50,15 @@ Múltiplos gráficos na mesma figura
 	linhas
 	k_args -> Formatação
 
-plt.legend(bbox_to_anchor=(x,y), loc=int, borderaxespad=float, fontsize=int) -> Imprime no gráfico a label
-com o título passado anteriormente
+plt.legend(bbox_to_anchor=(x,y), loc=int, borderaxespad=float, fontsize=int, frameon=bool) -> Imprime no
+gráfico a label com o título passado anteriormente
 
 	- bbox_to_anchor -> Seta um referencial indo de 0 a 1 dentro do gráfico, sendo 0 o mínimo possível e
 	1 o máximo possível. É possível passar números maiores, mas cabe avaliação para onde a legenda irá
 	ser plotada.
 	- loc -> Localização dentro do gráfico, podendo ser no centro, mais a esquerda, mais a direitra, etc
 	- borderaxespad -> Não sei o que é isso :)
+	- frameon -> Se True, mantém as linhas de borda do legend, se False, retira as linhas
 
 ex: plt.axhline(p, label="pyplot horizontal line")
     plt.legend()
@@ -94,6 +95,16 @@ tamanho deles
 
 *** EIXOS ***
 
+					EM CASO DE APENAS UM GRÁFICO
+plt.xticks([]) -> Oculta o eixo x
+plt.yticks([]) -> Oculta o eixo y
+plt.axis('off') -> Oculta ambos
+
+ax = plt.gca() -> Essa linha permite que você execute os códigos abaixo, mesmo que eles sejam destinados ao
+caso de mais de um plot
+
+					EM CASO DE DOIS OU MAIS GRÁFICOS
+
 ax[posição do gráfico].yaxis.set_visible(False) -> Retira o eixo y
 ax[posição do gráfico].xaxis.set_visible(False) -> Retira o eixo x
 ax[posição do gráfico].spines['right'].set_visible(False) -> Retira a linha da direita do gráfico
@@ -113,3 +124,10 @@ handles, lables = ax.get_legend_handles_labels() -> Captura o texto que tem dent
 
 grafico.yaxis.set_major_formatter(matplotlib.ticker.StrMethodFormatter('formatação')) -> Formata y como quiser
 grafico.xaxis.set_major_formatter(matplotlib.ticker.StrMethodFormatter('formatação')) -> Formata x como quiser
+
+*** QUEBRANDO TEXTOS MUITO LONGOS DOS LABELS ***
+
+labels = df.index.tolist()
+from textwrap import wrap
+labels = ['\n'.join(wrap(l,12) for l in labels)]
+plt.xticks(range(len(labels)))

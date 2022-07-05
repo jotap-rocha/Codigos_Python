@@ -4,7 +4,7 @@ variável = {} -> Declara o dicionário
 dici = {}.fromkeys(['chave1', 'chave2', 'chave3'], 0) -> Cria as chaves informadas
 e já aloca, somente um, valor a essas chaves
 
-Dicionário.key() -> Retorna o "índice" do dicionário
+Dicionário.keys() -> Retorna o "índice" do dicionário
 Dicionário.values() -> Retorna o valor da chave
 Dicionário.items() -> Retorna o conjunto chave-valor
 

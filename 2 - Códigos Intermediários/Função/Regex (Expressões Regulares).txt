@@ -1,3 +1,5 @@
+import re
+
 *MÉTODOS*
 
 re.match('padrão buscado', 'string') -> Procura equivalência no início da string.
@@ -17,3 +19,10 @@ re.compile() -> Útil para não ser necessário reescrever o mesmo padrão busca
 inúmeras vezes
 
 Há mais operadores para ajudar a encontrar padrões https://docs.python.org/2/library/re.html
+
+^: Começa com
+$: Termina com
+*: O último caracter repetido 0 ou mais vezes
++: O último caracter repetido 1 ou mais vezes
+?: O último caracter repetido 0 ou 1 vez
+[A-Z]: Qualquer valor em maiúsculo (digite literalmente [A-Z])

@@ -4,6 +4,8 @@ deixa a memória mais tranquila, não pesa tanto
 np.array(obj) -> Retorna um array de alguma coisa
 
 np.ones(int) -> Retorna a quantidade passada em número 1, caso o parâmetro fosse 2, ele ia retornar [1,1]
+np.zeros(shape=(qta, linha, coluna)) -> Retorna uma matriz com uma quantidade x de matrizes, quantidade x de
+linhas e quantidade x de colunas
 
 np.empty(int) -> Retorna um array vazio, porém não completamente vazio
 

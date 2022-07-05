@@ -31,6 +31,12 @@ dataframe.iloc[int] -> Localiza linha e coluna pelo número da linha
 dataframe.set_index('coluna1',inplace=True) -> Utiliza a coluna do dataframe indicada para ser index
 dataframe['nome_do_index'] = dataframe.index -> Cria um index para o dataframe
 
+*** CAPTURANDO TRECHOS DE STRINGS DENTRO DAS COLUNAS ***
+
+df[coluna] = df[coluna].str[fatiamento] -> Captura o intervalo da string desejado
+df[coluna] = df[coluna].str.split('texto') -> Separa o texto dentro do dataframe conforme o parâmetro passado
+df[coluna] = df[coluna].str.get(índice) -> Captura um texto no índice passado, pode ser usado logo após o split
+
 *** APLICANDO FUNÇÃO EM COLUNAS ***
 
 dataframe.apply(np.sqrt) -> Aplica raiz quadrada no dataframe
