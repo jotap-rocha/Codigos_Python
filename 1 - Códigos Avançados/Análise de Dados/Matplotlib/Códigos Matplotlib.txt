@@ -1,77 +1,199 @@
 10:49 AM 11/22/2021
 
-df.unstack() -> Desempilha o gráfico, muito bom pra quando queremos plotar um gráfico agrupado
+*** PLOTS ***
 
-plt.figure(figsize=()) -> Seta o tamanho de um gráfico apenas
-plt.set_size_inches(figsize=()) -> Seta o tamanho de mais de um gráfico
-
-plt.plot(dadosx, dadosy, linestyle ou ls='', color ou c='', lw=float, figsize=(int,int),
-yticks=range(int:inicio,int:fim,int:passo),marker='palavra-chave') -> Criando um gráfico
-	dadosx -> Dado na coordenada x
-	dadosy -> Dado na coordenada y
-	linestyle ou ls-> Estilo da linha, confira na documentação: https://matplotlib.org/stable/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D.set_marker
-	color ou c -> Cor da linha, confira na documentação: https://matplotlib.org/stable/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D.set_marker
+plt.plot(dadosx, dadosy, linestyle ou ls='', label='', color ou c='', lw=float, figsize=(int,int),
+yticks=range(int:inicio,int:fim,int:passo),marker='palavra-chave', alpha=float, fillstyle='palavra-chave',
+visible=bool) -> Criando um gráfico
+	- dadosx -> Dado na coordenada x
+	- dadosy -> Dado na coordenada y
+	- linestyle ou ls-> Estilo da linha, confira na documentação: https://matplotlib.org/stable/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D.set_marker
+	- color ou c -> Cor da linha, confira na documentação: https://matplotlib.org/stable/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D.set_marker
 	É possível usar o código hexadecimal da cor também, através da palavra-chave colorpicker no google
-	linewidth ou lw -> Aumenta a largura da linha
+	- label -> String passada para a legenda do gráfico
+	- linewidth ou lw -> Aumenta a largura da linha
 	- figsize -> Define o tamanho do seu gráfico
 	- yticks -> Define o valor onde o gráfico começa, onde termina e o passo
 	- marker -> Adiciona marcadores, símbolos, para ajudar na visualização do gráfico, consulte a
 	documentação para saber quais marcadores utilizar
+	- alpha -> Define a opacidade do gráfico gerado
+	- fillstyle -> Preenche o marcador de acordo com a palavra-chave passada. Palavras-chaves: 'full',
+	'left', 'right', 'bottom', 'top', 'none'
+	- visible -> Torna o gráfico invisível
 
-df['coluna'].hist(bins=10, xlabelsize=6) -> Constrói um gráfico com o tamanho do eixo x reduzido
-dataframe.boxplot(column='coluna1', figsize=(),subplots=Boolean) -> Constroi o boxplot
-matplotlib.style.use('ggplot') -> Altera o estilo do gráfico
-matplotlib.style.available -> Estilos para usar
+plt.bar(x, height, width=float, align='palavra-chave', label='',color='palavra-chave', edgecolor=str ou lista,
+tick_label=str ou lista)
+
+	- x -> Dados nas coordenadas x
+	- height -> Dados nas coordenadas y
+	- width -> Largura da barra
+	- align -> Alinhamento da barra no eixo x
+	- label -> String passada para legenda do gráfico
+	- color -> Cor das barras
+	- edgecolor -> Cor das bordas das barras
+	- tick_label -> Altera os ticks do eixo x de acordo com uma string ou uma lista
+
+plt.barh(y, weight=float, width, align='palavra-chave', label='',color='palavra-chave', edgecolor=str ou lista,
+tick_label=str ou lista)
+
+	- A mesma coisa de plt.bar(), porém weight fica responsável pelo eixo x
+
+plt.scatter(x, y, c=str ou list, marker='palavra-chave', cmap=colormap, norm=float, vmin=float, vmax=float,
+alpha=float, edgecolors=dict)
+
+	- x -> Dados na coordenada x
+	- y -> Dados na coordenada y
+	- c -> Cor
+	- marker -> Define marcadores no gráfico
+	- cmap -> Palavras chaves que definem uma escala de cor do gráfico
+	- norm -> Se for passado um array em c, então este parâmetro ajuda a normalizar a escala de cor, no 
+	alcance de 0 a 1
+	- vmin -> Valor mínimo de ticks
+	- vmax -> Valor máximo de ticks
+	- alpha -> Define a opacidade do gráfico gerado
+	- edgecolors -> Cor de borda dos pontos gerados
 
 plt.axvline(xpoints, ymin, ymax, k_args) -> Cria um gráfico em vertical
 
-	xpoints -> Ponto no eixo x onde a linha será gerada
-	ymin -> Parte inferior do gráfico
-	ymax -> Topo do gráfico
-	k_args -> Formatação de linha, cor, rótulo, etc
+	- xpoints -> Ponto no eixo x onde a linha será gerada
+	- ymin -> Parte inferior do gráfico
+	- ymax -> Topo do gráfico
+	- k_args -> Formatação de linha, cor, rótulo, etc
 
 plt.axhline(xpoints, ymin, ymax, k_args) -> Cria um gráfico em horizontal
 
-	xpoints -> Ponto no eixo x onde a linha será gerada
-	ymin -> Parte inferior do gráfico
-	ymax -> Topo do gráfico
-	k_args -> Formatação de linha, cor, rótulo, etc
+	- xpoints -> Ponto no eixo x onde a linha será gerada
+	- ymin -> Parte inferior do gráfico
+	- ymax -> Topo do gráfico
+	- k_args -> Formatação de linha, cor, rótulo, etc
 
-plt.subplot(nlinhas, ncolunas, index, k_args, figsize=(), sharex='palavra-chave', sharey='palavra-chave') -> 
-Múltiplos gráficos na mesma figura
+Esses gráficos funcionam também passando o seguinte código: ax.plot, ax.bar
+Esses códigos são usados para gerar mais de um gráfico, aí não utiliza-se a classe Pyplot, mas sim a classe
+Axes
 
-	nlinhas -> Número de gráficos em uma linha
-	ncolunas -> Número de gráficos em uma coluna
-	index -> Qual índice o gráfico deve estar
-	figsize -> Tamanho do gráfico
-	sharex -> Compartilha o eixo x entre os gráficos, se passar como parâmetro 'col', ele compartilha com
+*** FIGURA ***
+
+plt.figure(num=int, figsize=tuple, dpi=int, facecolor='palavra-chave', edgecolor='palavra-chave', frameon=bool,
+clear=bool, tight_layout=bool) -> Seta o tamanho de um gráfico apenas
+
+	- num -> Identificador da figura
+	- figsize -> Tamanho da figura
+	- dpi -> Qualidade da visualização
+	- facecolor -> Cor dos plots além das bordas do gráfico
+	- edgecolor -> Cor da borda do plot
+	- frameon -> Define a visibilidade além das bordas do gráfico
+	- clear -> Se já existir um gráfico anterior, é limpado
+	- tight_layout -> Alinha os gráficos, muito importante ao se plotar dois ou mais gráficos
+
+*** SUBPLOTS ***
+
+plt.subplot(nlinhas, ncolunas, index, k_args, figsize=(), sharex='palavra-chave', sharey='palavra-chave',
+gridspec_kw=dict) -> Múltiplos gráficos na mesma figura
+
+	- nlinhas -> Número de gráficos em uma linha
+	- ncolunas -> Número de gráficos em uma coluna
+	- index -> Qual índice o gráfico deve estar
+	- figsize -> Tamanho do gráfico
+	- sharex -> Compartilha o eixo x entre os gráficos, se passar como parâmetro 'col', ele compartilha com
 	colunas
-	sharey -> Compartilha o eixo y entre os gráficos, se passar como parâmetro 'rows', ele compartilha com
+	- sharey -> Compartilha o eixo y entre os gráficos, se passar como parâmetro 'rows', ele compartilha com
 	linhas
+	- gridspec_kw -> Formata o gráfico para ficar desproporcional, por exemplo, o gráfico de cima pode
+	ficar maior ou menor que o de baixo
 	k_args -> Formatação
 
-plt.legend(bbox_to_anchor=(x,y), loc=int, borderaxespad=float, fontsize=int, frameon=bool) -> Imprime no
-gráfico a label com o título passado anteriormente
+plt.subplots_adjust(wspace=float, hspace=float) -> Encurta ou aumenta o espaço entre um gráfico e outro
+
+	- wspace -> Largura do espaçamento
+	- hspace -< Altura do espaçamento
+
+fig.suptitle(title=str, fontsize=int, x=float, y=float, fontweight='palavra-chave', fontproperties=dict) -> 
+Título da figura
+
+	- title -> Título da figura
+	- fontsize -> Tamanho da fonte
+	- x -> Coordenada para alterar a posição do título, em relação ao eixo x, que por padrão é centralizado
+	- y -> Coordenada para alterar a posição do título, em relação ao eixo y, que por padrão é centralizado
+	- fontweight -> Negrito, há diversos tons
+	- fontproperties -> Fonte do texto
+
+*** TÍTULOS ***
+
+variavel.set_title(title=str, loc='palavra-chave', fontdict=dict, pad=int) -> Cria um título para o
+axes, o gráfico em si
+
+	- title -> Título do axes
+	- loc -> Localização de onde o título vai ficar, mais centralizado, mais pro lado, etc
+	- fontdict -> Parâmetro recebe diversas formatações através de dicionário como fonte e negrito, etc
+	ex: fontdict={'fontsize': 15, 'fontweight':'medium'}
+	- pad -> Distância do texto até o gráfico
+
+*** LEGENDAS ***
+
+plt.legend(bbox_to_anchor=(x,y), loc=int, prop=dict, borderaxespad=float, fontsize=int, frameon=bool,
+facecolor=list, edgecolor='palavra-chave' ou list) -> Imprime no gráfico a label com o título passado
+anteriormente
 
 	- bbox_to_anchor -> Seta um referencial indo de 0 a 1 dentro do gráfico, sendo 0 o mínimo possível e
 	1 o máximo possível. É possível passar números maiores, mas cabe avaliação para onde a legenda irá
 	ser plotada.
 	- loc -> Localização dentro do gráfico, podendo ser no centro, mais a esquerda, mais a direitra, etc
-	- borderaxespad -> Não sei o que é isso :)
+	- prop -> Fonte das legendas
+	- borderaxespad -> Espaço entre o axes e a borda da caixa da legenda
+	- fontsize -> Tamanho da fonte do texto
 	- frameon -> Se True, mantém as linhas de borda do legend, se False, retira as linhas
+	- facecolor -> Cor da caixa da legenda
+	- edgecolor -> Cor da borda da caixa
 
-ex: plt.axhline(p, label="pyplot horizontal line")
-    plt.legend()
+					FILTRANDO O LEGEND DO PLOT
+
+handles, lables = ax.get_legend_handles_labels() -> Captura o texto que tem dentro da legenda
+
+*** EIXO X ***
 
 plt.xlim([início, fim]) -> Definição de intervalo ou limite do eixo x
-plt.ylim([início, fim]) -> Definição de intervalor ou limite do eixo y
+ax.set_xlim(list) -> Definição de intervalo ou limite do eixo x
 plt.xlabel('Texto identificador') -> Descrição do eixo x no gráfico
-plt.ylabel('Texto identificador') -> Descrição do eixo y no gráfico
-plt.axis(xmin, xmax, ymin, ymax e 'forma') -> Monta o eixo do gráfico com base
-no mínimo e máximo. A forma pode ser obtida ao acessar a docstring da função
-shift+tab
+ax.set_xlabel(text=str, labelpad=int) -> Descrição do eixo x no gráfico
 
-variavel.set_title('Título',fontsize=int) -> Cria um título para o axes, o gráfico em si
+	- labelpad -> Distância do texto identificador até o eixo
+
+plt.xticks([]) -> Oculta o eixo x
+ax.set_xticks(list) -> Define os ticks do axis(eixo) x
+grafico.xaxis.set_major_formatter(matplotlib.ticker.StrMethodFormatter('formatação')) -> Formata x como quiser
+
+*** EIXO Y ***
+
+plt.ylim([início, fim]) -> Definição de intervalor ou limite do eixo y
+ax.set_ylim(list) -> Definição de intervalo ou limite do eixo y
+plt.ylabel('Texto identificador') -> Descrição do eixo y no gráfico
+ax.set_ylabel(text=str, labelpad=int) -> Descrição do eixo y no gráfico
+
+	- labelpad -> Distância do texto identificador até o eixo
+
+plt.yticks([]) -> Oculta o eixo y
+ax.set_yticks(list) -> Define os ticks do axis(eixo) y
+grafico.yaxis.set_major_formatter(matplotlib.ticker.StrMethodFormatter('formatação')) -> Formata y como quiser
+
+
+*** QUEBRANDO TEXTOS MUITO LONGOS DOS LABELS ***
+
+labels = df.index.tolist()
+from textwrap import wrap
+labels = ['\n'.join(wrap(l,12) for l in labels)]
+plt.xticks(range(len(labels)))
+
+*** LINHAS DE BORDA DO GRÁFICO ***
+
+plt.axis('off') -> Oculta ambos
+ax.yaxis.set_visible(False) -> Retira o eixo y
+ax.xaxis.set_visible(False) -> Retira o eixo x
+ax.spines['right'].set_visible(False) -> Retira a linha da direita do gráfico
+ax.spines['top'].set_visible(False) -> Retira a linha superior do gráfico
+ax.spines['left'].set_visible(False) -> Retira a linha da esquerda do gráfico
+ax.spines['bottom'].set_visible(False) -> Retira a linha inferior do gráfico
+
+*** ANOTAÇÕES ***
 
 variavel.text(x=float, y=float, 'texto', va='palavra_chave',ha='palavra_chave', color='palavra_chave',
 bbox=dict) -> Plota um texto no gráfico onde você quiser.
@@ -82,52 +204,54 @@ bbox=dict) -> Plota um texto no gráfico onde você quiser.
 	- bbox -> Deixa o texto mais bonito. Parâmetros do dict: 'boxstyle': 'round'(acabamento da caixa de 
 	texto),'facecolor':'cor','alpha': 0.3(transparência da caixa de texto)
 
-ax.annotate(texto, xy=(x,y), ha='palavra-chave', va='palavra-chave', color) -> Cria uma anotação dentro do
-gráfico
+ax.annotate(texto, xy=(x,y), xycoords='palavra-chave', xytext=tuple, textcoords='palavra-chave',arrowprops=dict, 
+size=int, ha='palavra-chave', va='palavra-chave', color) -> Cria uma anotação
+dentro do gráfico
 
 	- texto -> O que você vai escrever
 	- xy -> Coordenadas no plano
+	- xycoords -> Onde a seta vai apontar
+	- xytext -> Posição de onde parte a seta
+	- textcoords -> Posição do texto com a seta que será gerado
+	- arrowprops -> Gera a seta. Dicionário: {facecolor='black', shrink=0.05, alpha=.7}
+	- size -> Tamanho da fonte do texto
 	- ha -> Alinhamento horizontal (palavras-chache: "center","right" e "left")
 	- va -> Alinhamento vertical (palavras-chache: "top","bottom","center","baseline" e "center_baseline")
+	- color -> Cor do texto/seta
+
+*** SALVANDO PLOT ***
+
+plt.clf() -> Limpa o gráfico
+plt.savefig('Nome do arquivo.png') -> Salva o gráfico
+fig.savefig('Nome do arquivo.png', format='palavra-chave', dpi=int) -> Salva o gráfico
+
+	- format -> Formato do arquivo, sugerido png, melhor qualidade
+	- dpi -> Qualidade de visualização da imagem
+
+*** OUTRAS CONFIGURAÇÕES ***
 
 plt.tight_layout() -> Permite enquadrar os gráficos lado a lado, necessitando somente do ajuste no
 tamanho deles
 
-*** EIXOS ***
+plt.set_size_inches(figsize=tuple) -> Seta o tamanho de mais de um gráfico
 
-					EM CASO DE APENAS UM GRÁFICO
-plt.xticks([]) -> Oculta o eixo x
-plt.yticks([]) -> Oculta o eixo y
-plt.axis('off') -> Oculta ambos
+matplotlib.style.use('ggplot') -> Altera o estilo do gráfico
 
-ax = plt.gca() -> Essa linha permite que você execute os códigos abaixo, mesmo que eles sejam destinados ao
-caso de mais de um plot
+matplotlib.style.available -> Estilos para usar
 
-					EM CASO DE DOIS OU MAIS GRÁFICOS
+df.unstack() -> Desempilha o gráfico, muito bom pra quando queremos plotar um gráfico agrupado
 
-ax[posição do gráfico].yaxis.set_visible(False) -> Retira o eixo y
-ax[posição do gráfico].xaxis.set_visible(False) -> Retira o eixo x
-ax[posição do gráfico].spines['right'].set_visible(False) -> Retira a linha da direita do gráfico
-ax[posição do gráfico].spines['top'].set_visible(False) -> Retira a linha superior do gráfico
-ax[posição do gráfico].spines['left'].set_visible(False) -> Retira a linha da esquerda do gráfico
-ax[posição do gráfico].spines['bottom'].set_visible(False) -> Retira a linha inferior do gráfico
+df['coluna'].hist(bins=10, xlabelsize=6) -> Constrói um gráfico com o tamanho do eixo x reduzido
 
+dataframe.boxplot(column='coluna1', figsize=(),subplots=Bool) -> Constroi o boxplot
 
-plt.clf() -> Limpa o gráfico
-plt.savefig('Nome do arquivo.png') -> Salva o gráfico
+ex: plt.axhline(p, label="pyplot horizontal line")
+    plt.legend()
 
-*** FILTRANDO O LEGEND DO PLOT ***
+plt.axis(xmin, xmax, ymin, ymax e 'forma') -> Monta o eixo do gráfico com base
+no mínimo e máximo. A forma pode ser obtida ao acessar a docstring da função
+shift+tab
 
-handles, lables = ax.get_legend_handles_labels() -> Captura o texto que tem dentro da legenda
-
-*** FORMATANDO TEXTO NO EIXO ***
-
-grafico.yaxis.set_major_formatter(matplotlib.ticker.StrMethodFormatter('formatação')) -> Formata y como quiser
-grafico.xaxis.set_major_formatter(matplotlib.ticker.StrMethodFormatter('formatação')) -> Formata x como quiser
-
-*** QUEBRANDO TEXTOS MUITO LONGOS DOS LABELS ***
-
-labels = df.index.tolist()
-from textwrap import wrap
-labels = ['\n'.join(wrap(l,12) for l in labels)]
-plt.xticks(range(len(labels)))
+ax = plt.gca() -> Essa linha permite que você execute os códigos da classe Axes, mesmo que eles sejam
+destinados ao caso de mais de um plot. Muito útil quando você plota apenas um gráfico e precisa alterar suas
+configurações

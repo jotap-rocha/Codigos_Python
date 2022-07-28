@@ -1,9 +1,9 @@
 CRIAR AMBIENTE VIRTUAL
-conda create -n meuambientevirtual
+conda create --name meuambientevirtual
 python3 -m venv nome_do_ambiente
 
 CRIAR AMBIENTE VIRTUAL COM VERSÃO ESPECÍFICA DO PYTHON
-conda create -n meuambientevirtual python=3.6
+conda create --name meuambientevirtual python=3.6
 
 REMOVER UM AMBIENTE VIRTUAL
 conda remove --name meuambientevirtual --all
