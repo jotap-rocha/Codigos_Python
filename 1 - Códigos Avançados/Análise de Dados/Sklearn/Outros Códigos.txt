@@ -1,0 +1,2 @@
+modelo.feature_importances_ -> Retorna o quanto cada feature dentro do modelo contribuiu para o resultado da
+previsão.

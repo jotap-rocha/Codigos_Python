@@ -1,3 +1,5 @@
+variavel.dtype -> Retorna o tipo de valor primitivo e seus bits: 16, 32, 64, etc
+
 np.float32 -> Transforma os dados de determinada coluna em float32, que é melhor do que apenas float, pois
 deixa a memória mais tranquila, não pesa tanto
 

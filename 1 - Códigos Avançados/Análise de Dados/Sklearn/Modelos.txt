@@ -1,0 +1,14 @@
+*** REGRESSÃO ***
+from sklearn.linear_model import LinearRegression -> Traça a melhor reta, a qual minimiza os erros
+
+from sklearn.ensemble import RandomForestRegressor -> Árvore de decisão, semelhante ao jogo de tabuleiro
+cara a cara
+
+from sklearn.ensemble import ExtraTreesRegressor -> Não tenho maiores explicações, mas é quase a mesma coisa
+que randomforest
+
+*** CLASSIFICAÇÃO ***
+
+from sklearn.tree import DecisionTreeClassifier -> Molelo de árvore de decisão
+
+from sklearn.linear_model import LogisticRegression -> Traça a melhor reta, a qual minimiza os erros

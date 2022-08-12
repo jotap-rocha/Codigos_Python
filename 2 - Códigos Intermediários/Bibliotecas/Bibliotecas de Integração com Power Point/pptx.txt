@@ -1,0 +1,84 @@
+pip install python-pptx
+
+Documentação: https://python-pptx.readthedocs.io/en/latest/index.html
+
+from pptx import Presentation
+apresentaçao = Presentation() -> Cria o objeto da biblioteca
+
+*** SLIDE ***
+
+slide = apresentaçao.slides.add_slide() -> Cria um slide do zero
+
+slide = apresentaçao.slides.add_slide(apresentaçao.slide_layouts[0]) -> Cria um slide com um layout definido.
+No colchete, ao alterar o número, você muda o layout também.
+
+*** TÍTULO E SUBTÍTULO ***
+
+titulo = slide.placeholders[0] -> Cria o objeto título, o qual pode-se manipular
+subtitulo = slide.placeholders[1] -> Cria o objeto subtítulo, o qual pode-se manipular
+
+PARA MANIPULAR:
+
+titulo.text = '1° slide'
+subtitulo.text = 'Criando ppt com python'
+
+*** TAMANHO DE OBJETOS DENTRO DO SLIDE ***
+
+from pptx.util import Inches
+
+Inches(num) -> Define o tamanho do objeto em polegadas. É necessário definir alguns parâmetros para, por 
+exemplo, criar uma caixa de texto.
+
+EXEMPLO:
+
+x = Inches(1)
+y = Inches(1)
+largura = Inches(2)
+altura = Inches(2)
+caixa_texto = slide.shapes.add_textbox(x, y, largura, altura)
+
+Esse código adiciona uma caixa de texto no slide de acordo com os parâmetros passados
+
+*** CAIXA DE TEXTO ***
+
+caixa_texto = slide.shapes.add_textbox(x, y, largura, altura) -> Cria o objeto no python e no slide, de acordo
+com os parâmetros passados.
+
+	- x -> Coordenada x de onde o objeto vai começar;
+	- y -> Coordenada y de onde o objeto vai começar;
+	- largura -> Largura do objeto;
+	-> altura -> Altura do objeto.
+
+caixa_texto.text = 'Vendas' -> Seta um texto para a caixa
+
+text_frame = caixa_texto.text_frame -> Cria um paragrafo
+paragrafo.text = 'R$ 10,000.00' -> Seta um texto para o paragrafo
+paragrafo.font.bold = True -> Seta o negrito
+
+from pptx.util import Pt
+paragrafo.font.size = Pt(30) -> Tamanho do texto
+
+*** GRÁFICOS NO SLIDE ***
+
+from pptx.chart.data import CategoryChartData
+caixa_texto = slide.shapes.add_textbox(x, y, largura, altura)
+dados_grafico = CategoryChartData() -> Cria o objeto de gráficos do Power Point
+
+dados_grafico.categories = produtos -> Passa informações do eixo x
+dados_grafico.add_series(title=str, series= list) -> Passa informações do eixo y
+
+	- title -> Título
+	- series -> Informações para o eixo y
+
+slide.shapes.add_chart(XL_CHART_TYPE.COLUMN_CLUSTERED, x, y, largura, altura, dados_grafico) -> Cria o gráfico
+
+	- 1° parâmetro -> Para passar o tipo do gráfico, passe o nome da biblioteca + . + nome do gráfico.
+	Link dos tipos de gráficos: https://python-pptx.readthedocs.io/en/latest/api/enum/XlChartType.html#xlcharttype
+	- x -> Coordenada x de onde o objeto vai começar;
+	- y -> Coordenada y de onde o objeto vai começar;
+	- largura -> Largura do objeto;
+	-> altura -> Altura do objeto.
+
+*** SALVAR ***
+
+apresentaçao.save('nome.pptx') -> Salva o arquivo

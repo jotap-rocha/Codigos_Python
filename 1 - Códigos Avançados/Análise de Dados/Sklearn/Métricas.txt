@@ -1,0 +1,44 @@
+from sklearn.metrics import métrica
+
+*** REGRESSÃO ***
+r2_score(y_true=data, y_pred=data) -> Métrica do R² que calcula o quanto o modelo acerta.
+
+	- y_true -> São os dados de teste reais, ou seja, o que existe na sua base
+	- y_pred -> São os dados de predição, ou seja, o que foi previsto pelo modelo
+
+mean_squared_error(y_true=data, y_pred=data) -> Métrica do erro quadrático médio que calcula qual a margem de
+erro do modelo, quando ocorre algum erro é claro, RECOMENDADO PARA QUANDO OS DADOS POSSUEM OUTLIER, exemplo: 
+O modelo alguma hora vai errar, isso é inevitável, mas quando ele erra, ele erra muito ou pouco? É o que essa
+métrica mede. Lembrando que para adicionar a raiz quadrada desta métrica, deve-se adicionar esta função: 
+np.sqrt(mean_squared_error())
+
+	- y_true -> São os dados de teste reais, ou seja, o que existe na sua base
+	- y_pred -> São os dados de predição, ou seja, o que foi previsto pelo modelo
+
+mean_absolute_error(y_true=data, y_pred=data) -> Métrica do erro médio absoluto que calcula qual a margem de 
+erro do modelo, quando ocorre algum erro é claro, RECOMENDADO PARA QUANDO OS DADOS NÃO POSSUEM OUTLIER, exemplo:
+O modelo alguma hora vai errar, isso é inevitável, mas quando ele erra, ele erra muito ou pouco? É o que essa
+métrica mede.
+
+	- y_true -> São os dados de teste reais, ou seja, o que existe na sua base
+	- y_pred -> São os dados de predição, ou seja, o que foi previsto pelo modelo
+
+*** CLASSIFICAÇÃO ***
+
+confusion_matrix(y_true=data, y_pred=data) -> Retorna a matriz de confusão, discriminando os verdadeiros e
+falsos positivos e negativos.
+
+	- y_true -> São os dados de teste reais, ou seja, o que existe na sua base
+	- y_pred -> São os dados de predição, ou seja, o que foi previsto pelo modelo
+
+accuracy_score(y_true=data, y_pred=data) -> Calcula a acurácia do modelo, o quanto ele acertou os verdadeiros
+
+	- y_true -> São os dados de teste reais, ou seja, o que existe na sua base
+	- y_pred -> São os dados de predição, ou seja, o que foi previsto pelo modelo
+
+precision_score(y_true=data, y_pred=data) -> Calcula o quanto o modelo acerta os positivos
+
+	- y_true -> São os dados de teste reais, ou seja, o que existe na sua base
+	- y_pred -> São os dados de predição, ou seja, o que foi previsto pelo modelo
+
+recall_score(y_true=data, y_pred=data) -> Calcula o quanto o modelo acerta o falso negativo

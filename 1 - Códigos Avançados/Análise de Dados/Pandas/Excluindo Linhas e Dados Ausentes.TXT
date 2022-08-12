@@ -20,7 +20,7 @@ dataframe.ffill() -> Preenche com o último valor
 *** COMANDOS PARA EXCLUIR LINHAS ***
 
 dataframe.drop_duplicates() -> Remove as duplicatas
-dataframe.drop(['coluna1'], axis=1) -> Removendo uma coluna específica
+dataframe.drop(['coluna1'], axis=1, inplace=True) -> Removendo uma coluna específica
 dataframe.drop([1]) -> Removendo a primeira linha
 dataframe.drop(variavel.index[[0, 1]]) -> Removendo linhas com fatiamento
 dataframe.drop(variavel.index[[-1]]) -> Removendo a última linha, a qual não se tem conhecimento

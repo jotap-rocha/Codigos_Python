@@ -1,0 +1,14 @@
+import keyring
+
+keyring.set_password(service_name=str, username=str, password=str) -> Salva as configurações da senha.
+Basicamente, utiliza o nome de serviço e usuário como credenciais para acessar a senha salva.
+
+	- service_name -> Nome do serviço/aplicação que guardará o acesso a senha
+	- username -> Nome de usuário que guardará o acesso a senha
+	- password -> Senha a ser salva com as credenciais passadas através dos outros parâmetros
+
+keyring.get_password(service_name=str, username=str) -> Através das configurações já salvas, você tem acesso
+a senha salva anteriormente.
+
+	- service_name -> Nome do serviço/aplicação que guardará o acesso a senha
+	- username -> Nome de usuário que guardará o acesso a senha
