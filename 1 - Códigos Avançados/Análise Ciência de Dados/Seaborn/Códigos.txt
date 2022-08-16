@@ -26,12 +26,16 @@ gráfico de dispersão
 	final
 	- figsize -> Tamanho da figura
 
-sns.relplot(data='', x='', y='', hue='', col='') -> Gera um gráfico de dispersão relacional
+sns.relplot(data='', x='', y='', hue='', col='') -> Gera um gráfico de dispersão relacional entre duas ou mais
+variáveis
 	
-	data -> Dataframe
-	x, y -> Coordenada
-	hue -> Faz um agrupamento, comparação, diferenciando os dados por cor
-	col -> Gera colunas, de acordo com as parâmetros passados
+	- data -> Dataframe
+	- x, y -> Coordenada
+	- hue -> Faz um agrupamento, comparação, diferenciando os dados por cor
+	- style -> Parâmetro para diferenciar os dados por formato
+	- col -> Gera colunas de gráfico. A quantidade de plots que é gerado é a mesma da quantidade de
+	categorias das colunas
+	- size -> Diferencia os dados por tamanho
 
 sns.distplot(data=df, ax=eixo, kde=bool, hist=bool) -> Gráfico de distribuição baseado na curva KDE (Kernel
 Density Estimation)
@@ -50,6 +54,6 @@ sns.set_style('nome_cor') -> Aponta o estilo de cor que o seaborn vai utilizar
 
 plt.xlabel('Valores eixo X') -> Descrição no eixo X
 plt.ylabel('Valores eixo y') -> Descrição no eixo y
-sns.palplot(sb.mpl_palette('cor', int:quantidade de cores) -> Cria uma paleta de
+sns.palplot(sns.mpl_palette('cor', int:quantidade de cores) -> Cria uma paleta de
 cores 
 sns.set(font_scale=int) -> Ajusta o tamanho da fonte no texto

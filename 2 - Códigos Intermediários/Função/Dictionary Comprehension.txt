@@ -1,0 +1,6 @@
+dicionario = {chave: valor for valor in intervalo} -> Um list comprehension para dicionários
+
+Exemplo:
+
+dobro = {x: x*2 for x in range(8)}
+print(dobro)

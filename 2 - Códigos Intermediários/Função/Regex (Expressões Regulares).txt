@@ -6,15 +6,20 @@ re.match('padrão buscado', 'string') -> Procura equivalência no início da str
 Caso não encontre nada ele retorna 'None'. Se quiser retornar a string buscada,
 sinalizando que foi achada use o método group(), o método start() e end() ajudam
 a delimitar o início e fim de onde o match() começa.
+
 re.search('padrão buscado', 'string') -> Similar ao match(), mas o search() não
 se restringe apenas ao início da string
+
 re.findall('padrão buscado', 'string') -> Retorna uma lista com todos os padrôes
 encontrados
+
 re.split('padrão', 'string', maxsplit=(opcional)) -> Divide a string pelas
 ocorrências do padrâo dado. Há, também, um argumento chamado maxsplit que limita
 quantas divisões são feitas na string
+
 re.sub('padrão', 'substituição', 'string') -> Busca o padrão de string e
 substitui por uma nova
+
 re.compile() -> Útil para não ser necessário reescrever o mesmo padrão buscado
 inúmeras vezes
 

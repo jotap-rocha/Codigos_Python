@@ -1,0 +1,34 @@
+O comando pip geralmente já vem instalado com o python, então ao baixar o python e instala-lo no seu
+computador, geralmente será instalado também o pip, salvo algumas exceções de configuração.
+
+O pip é responsável por instalar bibliotecas que não vem por padrão no python, como pandas, seaborn, matplotlib,
+etc, além de atualizar as mesmas ou desinstalar. Basicamente, o comando pip é um gerenciador de bibliotecas do
+python.
+
+Dito isto, vamos às funcionalidades dele:
+
+*** INSTALAÇÃO ***
+
+pip install biblioteca
+
+*** DESINSTALAÇÃO ***
+
+pip uninstall biblioteca
+
+*** ATUALIZAÇÃO ***
+
+pip install --upgrade biblioteca
+pip install biblioteca -U
+
+*** LISTAGEM DE BIBLIOTECAS INSTALADAS ***
+
+pip list -> Lista todas as bibliotecas instaladas dentro do ambiente virtual
+pip freeze -> Lista todas as bibliotecas instaladas manualmente
+
+*** REQUIREMENTS.TXT ***
+
+pip freeze > requirements.txt -> Cria um arquivo com as bibliotecas que estão sendo utilizadas, junto com suas
+versões
+
+pip install -r nome_do_arquivo.txt -> Lê o conteúdo do arquivo e instala todas as bibliotecas necessárias para
+o projeto
