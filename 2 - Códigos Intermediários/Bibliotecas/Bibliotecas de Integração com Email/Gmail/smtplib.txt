@@ -1,0 +1,41 @@
+import smtplib
+import email.message
+
+def enviar_email():
+	corpo_email = """
+	<p> Olá!!! </p>
+	<p> Segue o exemplo de como enviar email com python </p>
+	"""
+	msg = email.message.Message()
+	msg['Subject'] = 'Assunto'
+	msg['From'] = 'email remetente'
+	msg['To'] = 'email destinatário'
+	password = 'senha'
+	msg.add_header('Content-Type', 'text/html')
+	msg.set_payload(corpo_email)
+
+	s = smtplib,SMTP('smtp.gmail.com: 587')
+	s.starttls()
+	# Credenciais de login
+	s.login(msg['From'], password)
+	s.sendmail(msg['From'], msg['To'], msg.as_string().encode('utf-8'))
+	print('Email enviado!')
+
+*** ATENÇÃO ***
+
+A parte da senha é algo específico, siga o passo a passo para conseguir a senha correta
+
+
+- Entra no seu gmail
+- Clica na logo do gmail, vai aparecer umas opções
+- Clique em "Gerenciar sua Conta do Goggle"
+- Vá na aba "Segurança", depois na seção "Como fazer login no Google"
+- Ativa a verificação em dias etapas
+- Clique em "Senhas de app"
+- Entre com sua senha normal
+- Clique em "Selecionar o app" e escolha a opção "E-mail"
+- Em "Selecionar dispositivo", escolha outro nome e crie um nome familiar a você, por exemplo: Python enviador
+de emails
+- Clique em gerar
+
+A senha gerada você copia e cola na variável password

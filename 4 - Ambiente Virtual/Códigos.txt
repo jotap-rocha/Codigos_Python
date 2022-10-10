@@ -15,3 +15,5 @@ cd nome_do_ambiente // cd Scripts // activate
 DESATIVAR UM ABIENTE VIRTUAL
 conda deactivate
 cd nome_do_ambiente // cd Scripts // deactivate
+
+conda update -n base -c defaults conda

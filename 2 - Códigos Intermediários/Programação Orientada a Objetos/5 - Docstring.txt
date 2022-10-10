@@ -1,0 +1,9 @@
+class classe:
+
+	"""
+	docstring, aqui é a área onde vc vai explicar como a sua classe funciona
+	"""
+
+Siga a PEP 257, é uma convenção de como montar docstring, só jogar no google que você acha
+
+link: https://peps.python.org/pep-0257/

@@ -1,6 +1,0 @@
-variavel = yagmail.SMTP(user='seuemail',password='senha') -> Login no email
-variavel.send(to='destinatario',subject='Assunto',contents='corpo do email', \
-attachments=''arquivo_anexo.extensão) -> Envia o email
-
-variavel.send(to='[destinatario1, destinatario2,...]', bcc='copiar alguém', subject='Assunto',\
-contents='corpo do email', attachments=''arquivo_anexo.extensão) -> Envia o email

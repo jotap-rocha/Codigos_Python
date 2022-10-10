@@ -1,0 +1,5 @@
+objeto.__dict__ -> Retorna um dicionário dos atributos das classes
+objeto.__doc__ -> Retorna a docstring da classe
+objeto.__name__ -> retorna o nome da classe
+objeto.__module__ -> Retorna o nome do módulo no qual a classe está definida
+objeto.__bases__ -> Retorna uma tupla que contém as classes base

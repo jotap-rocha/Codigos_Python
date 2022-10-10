@@ -1,0 +1,10 @@
+*** DECLARAÇÃO ***
+
+class classe:				-> Declaração da classe
+
+	def __init__(self, args):	-> método iniciador, onde se declara os atributos da classe
+	self.args = valor
+	.
+	.
+	.
+

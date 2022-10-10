@@ -2,7 +2,7 @@ from pathlib import Path
 
 path -> Método que trata de navegar por entre os arquivos do computador
 
-path.cwd() -> Captura o lugar onde o seu arquivo está rodando, muito útil se a pasta que você quer está no
+Path.cwd() -> Captura o lugar onde o seu arquivo está rodando, muito útil se a pasta que você quer está no
 mesmo local do arquivo
 
 Se você quer entrar em uma pasta em qualquer lugar do computador, vc tem que usar o método path, especificar
@@ -10,15 +10,15 @@ o caminho como argumento e armazenar em uma variável. Lembre de usar barra norm
 
 EXEMPLO
 
-caminho = path('C:/Users/JP/Desktop/Python/Lista de Códigos/Códigos Python/2 - Códigos Intermediários\Bibliotecas/Bibliotecas de Arquivos do Computador/Nova pasta')
+caminho = Path('C:/Users/JP/Desktop/Python/Lista de Códigos/Códigos Python/2 - Códigos Intermediários\Bibliotecas/Bibliotecas de Arquivos do Computador/Nova pasta')
 
-path.iterdir() -> Lista o caminho
-path.exists('caminho do seu arquivo') -> Verifica se o seu arquivo existe
+Path.iterdir() -> Lista o caminho
+Path.exists('caminho do seu arquivo') -> Verifica se o seu arquivo existe
 outrocaminho / path('arquivo') -> Navega por caminhos salvos em variáveis anteriores
 
 * CRIANDO UMA NOVA PASTA *
 
-path('caminho da pasta').mkdir() -> Cria uma pasta nova no computador
+Path('caminho da pasta').mkdir() -> Cria uma pasta nova no computador
 
 * CAPTURANDO O NOME DO ARQUIVO COMO TEXTO *
 

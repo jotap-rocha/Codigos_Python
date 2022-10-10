@@ -1,0 +1,6 @@
+pip install pyinstaller (instalar uma única vez)
+
+Para a biblioteca funcionar, tem de ser um arquivo de extensão .py, ou seja, se você estiver em um arquivo
+.ipynb, faça a conversão para .py
+
+execute a seguinte linha de comando: pyinstaller -w "Nome do seu Arquivo.py"

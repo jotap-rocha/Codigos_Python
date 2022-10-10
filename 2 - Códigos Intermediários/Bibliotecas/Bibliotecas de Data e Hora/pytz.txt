@@ -1,0 +1,3 @@
+Realiza o ajuste de fuso-horário
+
+variavel = pytz.timezone('Brazil/East') -> Captura o fuso de Brasília

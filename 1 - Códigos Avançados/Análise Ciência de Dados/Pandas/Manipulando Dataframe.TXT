@@ -26,6 +26,9 @@ dataframe.loc[linha, coluna] -> Localiza linha e coluna no dataframe
 
 dataframe.iloc[int] -> Localiza linha e coluna pelo número da linha
 
+EXEMPLO: dataframe.iloc[30:40, [0,1,2]]
+output: Retorna as linhas de 30 a 39 nas colunas 1,2 e 3, independente se a coluna for nomeada ou não
+
 *** ÍNDICES ***
 
 dataframe.set_index('coluna1',inplace=True) -> Utiliza a coluna do dataframe indicada para ser index
@@ -36,6 +39,12 @@ dataframe['nome_do_index'] = dataframe.index -> Cria um index para o dataframe
 df[coluna] = df[coluna].str[fatiamento] -> Captura o intervalo da string desejado
 df[coluna] = df[coluna].str.split('texto') -> Separa o texto dentro do dataframe conforme o parâmetro passado
 df[coluna] = df[coluna].str.get(índice) -> Captura um texto no índice passado, pode ser usado logo após o split
+
+*** LOCALIZANDO PALAVRAS ESPECÍFICAS ***
+
+df[df.coluna.str.contains('palavra buscada')] -> Faz uma busca na coluna desejada de uma palavra específica,
+bom para se fazer um filtro bem específico na base, 
+
 
 *** APLICANDO FUNÇÃO EM COLUNAS ***
 
@@ -54,10 +63,16 @@ dataframe.sort_values(by=['coluna1']) -> Ordena coluna1 de forma crescente
 dataframe.sort_values('coluna1') -> Ordena coluna1 de forma crescente
 dataframe.sort_values(by=['coluna1'],ascending=False) -> Ordena coluna1 de forma decrescente
 
+dataframe.sort_index(by=['coluna1'],ascending=False) -> Ordena o index
+
 *** PERCORRENDO COLUNAS E LINHAS ***
 
 for linha in dataframe.index: -> Você percorre as linhas do seu dataframe
 for coluna in dataframe: -> Você percorre todas as colunas do seu dataframe
+
+*** DUPLICAR LINHAS ***
+
+df.explode(coluna) -> Pega listas de uma coluna e duplica as linhas
 
 *** FILTROS ***
 
@@ -84,8 +99,8 @@ dataframe['coluna'].value_counts().sort_index() -> Ordena o series pelo index, n
 
 *** JOIN ENTRE TABELAS ***
 
-novo_dataframe = dataframe1.merge(dataframe2,on='chave estrangeira') -> Cria um novo dataframe com a junção
-dos dataframes passados, junto de suas colunas
+novo_dataframe = pd.merge([dataframe1,dataframe2] ,on='chave estrangeira') -> Cria um novo dataframe com a
+junção dos dataframes passados, junto de suas colunas
 
 
 *** JUNTANDO DOIS SERIES OU DUAS TABELAS COM AS MESMAS COLUNAS ***
@@ -117,3 +132,7 @@ dataframe = pd.to_datetime(dataframe).dt.date -> Transforma os dados somente em 
 dataframe['coluna'].dt.year -> Captura o ano
 dataframe['coluna'].dt.month -> Captura o mês
 dataframe['coluna'].dt.day -> Captura o dia
+
+*** FORMATO DE VALORES ***
+pd.options.display.float_format = formatação -> O pandas entende a formatação passada e a torna padrão para
+qualquer cálculo que ele apresente, exemplo: '{:,.2f}'.format

@@ -1,0 +1,7 @@
+A fim de encurtar os parenteses o parâmetro "args" significa que você pode passar qualquer parâmetro
+
+Para criar uma instância: instancia = classe(args(opcional))
+
+Para chamar um atributo da classe utilize: .atributo
+
+Para utilizar um método da classe utilize: .método()

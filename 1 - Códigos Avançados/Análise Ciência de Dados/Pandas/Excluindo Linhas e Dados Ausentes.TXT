@@ -8,6 +8,10 @@ dataframe.isnull().sum() -> Também retorna a quantidade de dados ausentes
 pd.isnull(dataframe['coluna']) -> Essa função deve ser recebida por uma variável e ela retorna as linhas
 que tem dados ausentes identificados
 
+df.loc[df.coluna.isnull()] -> Retorna as linhas que possuem valores NaN, na coluna específica
+
+df.loc[df.coluna.notnull()] -> Retorna as linhas que não possuem valores NaN, na coluna específica
+
 *** COMANDOS PARA TRATAR DADOS AUSENTES ***
 
 colunaDataFrame.fillna(ColunaDataFrame, inplace=True) -> Substitui os valores faltantes por zero
@@ -16,6 +20,10 @@ média
 dataframe.fillna('Nome que deseja substituir', inplace=True) -> Substitui os valores ausentes por
 algo que você deseja
 dataframe.ffill() -> Preenche com o último valor
+
+*** TRANSFORMANDO DADOS EM NAN ***
+
+np.nan -> Transforma um item desejado em Not a Number
 
 *** COMANDOS PARA EXCLUIR LINHAS ***
 

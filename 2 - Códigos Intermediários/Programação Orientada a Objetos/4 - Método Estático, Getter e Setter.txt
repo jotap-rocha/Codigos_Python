@@ -1,0 +1,27 @@
+class classe:				-> Declaração da classe
+
+	@staticmethod			-> Notação por convenção
+	def método_estatico():		-> Não recebe o self
+		contrucao
+		.
+		.
+		.
+
+	def __init__(self, args):	-> método iniciador, onde se declara os atributos da classe
+	self.args = valor
+	.
+	.
+	.
+
+O método estático não recebe informações da classe, ele é utilizado apenas para algo bem específico, por
+exemplo, retornar data e hora, algum cálculo, etc
+
+---------------------------------------------------------------------------------------------------------------
+
+*** MÉTODO GETTER ***
+
+@property getter -> Convenção de escrita para sinalizar um getter
+
+*** MÉTODO SETTER ***
+
+@metodo.setter -> Convenção de escrita para sinalizar um setter

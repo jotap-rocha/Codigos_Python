@@ -1,8 +1,34 @@
 10:44 AM 12/21/2021
 
 df = pd.DataFrame(variaveis)
-correlaçao = df.corr(method='spearman') -> Parâmetro opcional que altera o método utilizado para o cálculo
-seaborn.heatmap(correlaçao, annot=True(exibe valores coeficientes de correlação no gráfico))
+
+correlaçao = df['colunas'].corr(method='spearman') -> Cálculo para o gráfico de correlação
+
+	- method -> Parâmetro necessário para se passar o método desejado de se fazer a correlação. 
+	Métodos: pearson (padrão), kendall, spearman, callable
+
+cor = sns.color_palette("coolwarm", as_cmap=True) -> Seta uma cor personalizável para o gráfico (OPCIONAL)
+
+heat_map = sns.heatmap(df=correlaçao, annot=True, vmax=int, vmin=int, linewidths=float, center=float,
+fmt=formatação, cmap=cor, cbar_kws=dict) -> Plota o gráfico de correlação por mapa de calor
+
+	- df -> Onde você vai passar a correlação, a qual será exibida os valores coeficientes de correlação
+	no gráfico
+	- annot -> Valor de cada quadrado no mapa de calor
+	- vmax -> Valor máximo do mapa de calor
+	- vmin -> Valor mínimo do mapa de calor
+	- linewidths -> Espessura das linhas dos quadrados
+	- center -> Define um centro para o seu gráfico
+	- fmt -> Formatação do texto do gráfico, ex: '.2f' os números serão exibidos com 2 pontos flutuantes
+	- cmap -> Escala de cores, passamos a variável cor aqui
+	- cbar_kws -> Outras propriedades do gráfico, uma delas: {'label': 'Título para a barra'}
+
+OPCIONAIS
+
+plt.rcParams['figure.figsize'] = (15,9)
+heat_map.set_xticklabels(heat_map.get_xticklabels(), rotation=55)
+
+---------------------------------------------------------------------------------------------------------------
 
 OUTRO MÉTODO
 

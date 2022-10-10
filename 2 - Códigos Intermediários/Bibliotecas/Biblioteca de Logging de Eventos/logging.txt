@@ -1,0 +1,76 @@
+import logging
+
+A biblioteca retorna para nós os loggings de eventos do script criado. Lista de alguns pontos importantes:
+
+logging.debug
+DEBUG - Informação detalhada, tipicamente de interesse apenas quando diagnosticando problemas.
+
+logging.info
+INFO - Confirmação de que as coisas estão funcionando como esperado.
+
+logging.warning
+WARNING - Uma indicação que algo inesperado aconteceu, ou um indicativo de algum problema em um futuro.
+
+logging.error
+ERROR - Por conta de um problema mais grave, o software não conseguiu executar alguma função.
+
+logging.critical
+CRITICAL - Um erro grave, indicando que o programa pode não conseguir continuar rodando.
+
+Por padrão, a biblioteca só printa os logs do warning para baixo, para ter acesso aos prints dos outros logs, 
+é necessário passar o nível que você quer ter acesso.
+
+logging.basicConfig(level=palavra-chave, filename=str, format=palava-chave) -> Digite um dos níveis de acesso
+acima em letras maiúsculas
+
+	- level -> Onde você vai passar os níveis de log, escrevendo exatamente assim: logging.CRITICAL,
+	logging.ERROR, logging.WARNING, logging.INFO, warning.DEBUG
+	- filename(opcional) -> Nome do caminho onde será salvo o arquivo com os logs, lembrando que se o
+	arquivo for ficar na mesma pasta do script só é necessário o nome do arquivo mesmo, exemplo: "logs.log"
+	- format -> Palavras chave para formatar como o log será escrito no arquivo, link com as palavras chave:
+	https://docs.python.org/3/library/logging.html#logrecord-attributes
+	EXEMPLO: format="%(asctime)s - %(levelname)s - %(message)s" (execute em alguma variável)
+
+*** IMPLEMENTANDO A BIBLIOTECA ***
+
+logging.debug(variavel)
+logging.info(variavel)
+logging.warning(variavel)
+logging.error(variavel)
+logging.critical(variavel)
+
+*** Exemplo de como utilizar ***
+
+import logging
+
+logging.basicConfig(level=logging.INFO,\
+    filename=r'C:\Users\jprocha\OneDrive - ICATU SEGUROS S A\Área de Trabalho\Projetos VSCode\Projetos\Projetos Hashtag Youtube\Projeto Logging de Eventos\Execucao.log',\
+    format="%(asctime)s - %(levelname)s - %(message)s")
+
+def resultado_operacional(faturamento, custo):
+    return faturamento - custo
+
+def lucro_liquido(faturamento, custo, percentual_imposto):
+    if percentual_imposto <= 0:
+        logging.warning('Percentual de imposto igual a 0, tá certo isso?')
+    return (faturamento - custo) * (1 - percentual_imposto)
+
+def lucro_por_acoes(faturamento, custo, percentual_imposto, acoes):
+    if acoes == 0:
+        logging.error('Ações não pode ser igual a 0')
+    return lucro_liquido(faturamento, custo, percentual_imposto) / acoes
+
+faturamento = 1000
+custo = 400
+percentual_imposto = .3 (troque este valor para 0 e teste)
+acoes = 0
+
+print()
+resultado = resultado_operacional(faturamento, custo)
+logging.info(f'Resultado: {resultado}')
+
+lucro = lucro_liquido(faturamento, custo, percentual_imposto)
+logging.info(f'Lucro: {lucro}')
+
+lucro_acao = lucro_por_acoes(faturamento, custo, percentual_imposto, acoes)
+logging.info(f'Lucro por ação: {lucro_acao}')

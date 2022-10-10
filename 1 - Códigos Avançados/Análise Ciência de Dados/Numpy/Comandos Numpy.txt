@@ -1,21 +1,34 @@
-variavel.dtype -> Retorna o tipo de valor primitivo e seus bits: 16, 32, 64, etc
+*** ARRAY ***
 
-np.float32 -> Transforma os dados de determinada coluna em float32, que é melhor do que apenas float, pois
-deixa a memória mais tranquila, não pesa tanto
+np.array(list) -> Retorna um array de alguma coisa
 
-np.array(obj) -> Retorna um array de alguma coisa
+np.empty(int) -> Retorna um array aleatório
 
 np.ones(int) -> Retorna a quantidade passada em número 1, caso o parâmetro fosse 2, ele ia retornar [1,1]
+
 np.zeros(shape=(qta, linha, coluna)) -> Retorna uma matriz com uma quantidade x de matrizes, quantidade x de
 linhas e quantidade x de colunas
-
-np.empty(int) -> Retorna um array vazio, porém não completamente vazio
 
 np.linspace(inicio:int,fim:int,qtd:int) -> Retorna um array com início, fim e quantidade de itens
 
 np.matrix(variavel que contenha uma matriz) -> monta um matriz
 
 np.shape(variavel) -> Formato/Dimensão da matriz
+
+np.arange(inicio, fim, passo) -> Cria números do início até o fim indo de tanto em tanto de acordo com o passo
+
+método.reshape(linha=int, coluna=int) -> Reformula seu array na quantidade de linhas e colunas que você passar
+
+variavel.ndim -> Retorna a forma do array
+
+*** CÁLCULO MATEMÁTICO ***
+
+variavel+1 ou variavel*2 ou qualquer outra operação: será aplicada no array inteiro, mas obviamente, precisa
+ser um array, caso seja uma lista, resultará em erro
+
+variavel.sum(axis) -> Soma todos os valores
+
+	- axis -> Eixo (opcional): 1 para linha e 0 para coluna
 
 np.mean(variavel) -> Calcula a média da matriz
 
@@ -27,5 +40,15 @@ e suas correlações. Somente pode ser usada com duas variáveis apenas.
 
 np.var(variavel) -> Calcula a variância
 
-np.arange(inicio, fim, passo) -> Cria números do início até o fim indo de tanto em tanto de acordo com o passo
 np.sin(variavel) -> Retorna o seno da variavel
+
+*** TIPOS E FORMATOS DE VARIÁVEL ***
+
+variavel.dtype -> Retorna o tipo de valor primitivo e seus bits: 16, 32, 64, etc
+
+np.float32 -> Transforma os dados de determinada coluna em float32, que é melhor do que apenas float, pois
+deixa a memória mais tranquila, não pesa tanto
+
+*** VALORES AUSENTES ***
+
+np.nan -> Transforma um item desejado em Not a Number

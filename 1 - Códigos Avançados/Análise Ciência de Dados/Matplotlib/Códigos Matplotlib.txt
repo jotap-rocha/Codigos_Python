@@ -175,6 +175,9 @@ plt.yticks([]) -> Oculta o eixo y
 ax.set_yticks(list) -> Define os ticks do axis(eixo) y
 grafico.yaxis.set_major_formatter(matplotlib.ticker.StrMethodFormatter('formatação')) -> Formata y como quiser
 
+*** FUNDO DO GRÁFICO ***
+
+ax.set_facecolor(cor) -> Altera o fundo do gráfico
 
 *** QUEBRANDO TEXTOS MUITO LONGOS DOS LABELS ***
 
@@ -226,7 +229,7 @@ plt.savefig('Nome do arquivo.png') -> Salva o gráfico
 fig.savefig('Nome do arquivo.png', format='palavra-chave', dpi=int) -> Salva o gráfico
 
 	- format -> Formato do arquivo, sugerido png, melhor qualidade
-	- dpi -> Qualidade de visualização da imagem
+	- dpi -> Qualidade de visualização da imagem, recomendado 300
 
 *** OUTRAS CONFIGURAÇÕES ***
 

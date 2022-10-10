@@ -1,4 +1,6 @@
-variavel = sb.heatmap(dados, cmap='codigo_cor',xticklabels(opcional), 
+import seaborn as sns
+
+variavel = sns.heatmap(dados, cmap='codigo_cor',xticklabels(opcional), 
 yticklabels(opcional), annot(opcional), cbar(opcional), cbar_kws(opcional)) -> Cria o mapa de calor
 
 	dados -> variável que guarda os dados para comporem o mapa de calor
@@ -11,15 +13,15 @@ yticklabels(opcional), annot(opcional), cbar(opcional), cbar_kws(opcional)) -> C
 	que adiciona um título a barra de cores lateral e realoca ela, no mapa,
 	horizontalmente
 
-sns.scatterplot(data='', x='', y='', hue='', style='', palette='',s=int,xlim=(),ylim=(),figsize=()) -> Gera um
-gráfico de dispersão
+sns.scatterplot(data='', x='', y='', hue='', style='', palette=list,s=int,xlim=(),ylim=(),figsize=()) -> Gera
+um gráfico de dispersão
 
 	data -> Dataframe
 	x, y -> Coordenada
 	hue -> Faz um agrupamento, comparação, diferenciando os dados por cor
 	style -> Usa símbolo diferente na coluna passada, a qual pode ser igual a que foi
 	passada para o parâmetro hue
-	palette -> Cor do gráfico, se for mais de uma cor, inserir um dicionário contendo
+	palette -> Cor do gráfico, se for mais de uma cor, inserir uma lista contendo
 	as cores
 	- s ou size -> Aumenta ou diminui o tamanho do ponto no gráfico scatter de dispersão
 	- xlim e ylim -> São limites no eixo, estabelecidos pelo próprio programador, delimitando o início e
@@ -37,13 +39,25 @@ variáveis
 	categorias das colunas
 	- size -> Diferencia os dados por tamanho
 
-sns.distplot(data=df, ax=eixo, kde=bool, hist=bool) -> Gráfico de distribuição baseado na curva KDE (Kernel
-Density Estimation)
+sns.lineplot(data=df, x, y, color=palavra-chave) -> Gera um gráfico de linha
+
+	- data -> Dataframe
+	- x, y -> Coordenada
+	- color -> Cor da linha, pode passar uma lista [.0,.0,.0] como argumento e setar as cores que você quer
+
+sns.displot(data=df, x=dados, y=dados, kind=palavra-chave, hue=coluna, col=coluna, rug=bool, legend=bool,
+palette=list ou dict) -> Gráfico de distribuição baseado na curva KDE (Kernel Density Estimation)
 
 	- data -> Recebe o dataframe
-	- ax -> Indica para qual eixo o gráfico deve ser plotado
-	- kde -> Insere a curva KDE
-	- hist -> retorna o histograma do gráfico
+	- x, y -> Coordenadas
+	- kind -> Qual o tipo de gráfico deve ser gerado. Palavras-chave: hist(histograma), kde(densidade) e
+	ecdf(proporção)
+	- hue -> Faz um agrupamento, comparação, diferenciando os dados por cor
+	- col -> Gera colunas de gráfico. A quantidade de plots que é gerado é a mesma da quantidade de
+	categorias das colunas
+	- rug -> Gera marcações dentro das barras
+	- legend -> Legenda do gráfico
+	- palette -> Paleta de cores definidas por colormap
 
 sns.kdeplot(df, shade=bool) -> Plota um kde univariado
 

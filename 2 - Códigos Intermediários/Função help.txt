@@ -1,0 +1,2 @@
+help(funcao) -> Exibe a docstring da função a qual você possui dúvidas quanto ao seu funcionamento e parâmentros
+necessários a se passar para ela

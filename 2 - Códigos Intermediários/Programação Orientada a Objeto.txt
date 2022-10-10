@@ -1,13 +1,25 @@
 class NomeDaClasse(ClassePai, ClassePai2, etc):
 	'Docstring opcional'
-	VariaveisDeClasse
+
+	@staticmethod		-> Notação necessária
+	def método():		-> Método estático, o qual não utiliza nenhum atributo da classe
+		operação
+
+	self.atributo = valor
+	.
+	.
+	.
 
 	def __init__(self, *args):
-		self.args = args
+		self.args = valor				-> Atributos da classe
 		NomeDaClasse.VariavelDeClasse = operação qualquer
 
-	def método(self):
-		operação
+	def método(self, args): -> Métodos da classe, os quais serão operados (público). O args é simplesmente
+		operação	para sinalizar que você pode passar qualquer parâmetro ali dentro
+
+	def _método(self, args): -> Métodos da classe, os quais serão operados (privado, observe o "_"). O args
+		operação	 é simplesmente para sinalizar que você pode passar qualquer parâmetro ali
+				 dentro
 
 Essa parte de baixo você segue com a programação normal
 
@@ -30,10 +42,3 @@ __del__(self) -> Destruidor
 __repr__(self) -> Representação de string avaliada
 __str__(self) -> Representação de string imprimível
 __cmp__(self, x) -> Comparação de objetos
-
-*OPERADORES DE PONTO*
-__dict__ -> Dicionário que contém espaço para nome de classe
-__doc__ -> Docstring da classe
-__name__ -> Nome da classe
-__module__ -> Nome do módulo no qual a classe está definida
-__bases__ -> Uma tupla que contém as classes base
