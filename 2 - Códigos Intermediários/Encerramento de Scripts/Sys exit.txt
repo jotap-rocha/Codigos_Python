@@ -1,0 +1,18 @@
+Trata-se da função exit() pertencente ao módulo sys, que sempre está disponível para os programas em Python
+(desde que importado). Essa função encerra o programa em execução, além de lançar a exceção SystemExit
+(recomendado para programas de produção).
+
+Ex:
+
+import sys
+lista = ['Azul', 'Vermelho', 'Verde', 'Amarelo', 'Cinza', 'Marrom']
+for cor in lista:
+    if cor == 'Amarelo':
+        break
+    print(cor)
+#sys.exit('Saindo') # Sai direto, mostrando a mensagem ao lançar a exceção
+# Capturar e tratar exceção e sair
+try:
+    sys.exit()
+except SystemExit:
+    print('Programa finalizado com a exceção SystemExit')

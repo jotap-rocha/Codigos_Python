@@ -1,3 +1,45 @@
+*** INICIANDO COM PYGAME ***
+
+pygame.init() -> Inicia todos os módulos que requerem iniciação
+
+variavel = pygame.display.set_mode([tamanho da sua tela]) -> Cria a janela com tamanhos definidos, por
+convenção, utiliza-se 640x480
+
+pygame.display.set_caption('texto') -> Título da janela aberta
+
+pygame.display.flip() -> Comando necessário para mostrar ao usuário o desenho na tela
+
+pygame.font.init() -> Inicia o módulo de fontes de texto
+variavel = pygame.font.SysFont(name=str, size=int, bold=bool, italic=bool) -> Seta a fonte que o texto irá 
+utilizar.
+
+	- name -> Fonte
+	- size -> Tamanho da fonte
+	- bold -> Negrito
+	- italic -> Itálico
+
+*** IMAGEM ***
+
+variavel1 = pygame.image.load('caminho/imagem.png') -> Carrega o arquivo da imagem para a variável
+variavel2 = variavel1.get_rect() -> Cria a hitbox do objeto. Hitbox é um retângulo que interage com outra
+hitbox de outro objeto, assim identificamos o contato de um objeto com outro objeto.
+
+*** MOVIMENTO ***
+
+variavel.move(x=int, y=int) -> Move o objeto após receber as novas coordenadas de x e y
+
+*** TELA ***
+
+screen.fill([r, g, b]) -> Preenche a cor da janela com o esquema RGB passado
+screen.blit(source=obj, dest=coord) -> Desenha de fato o objeto na tela
+
+	- source -> Objeto que vai ser desenhado
+	- dest -> Coordenadas em x e y que o objeto terá ( screen.blit(objeto, (coord_x, coord_y) ) )
+
+pygame.display.flip() -> Torna tudo visível na tela
+
+*** MÚSICA ***
+
 pygame.mixer.init()
 pygame.mixer.music.load('musica.mp3') Função para tocar música
 pygame.mixer.music.play()

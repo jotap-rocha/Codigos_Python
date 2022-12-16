@@ -8,12 +8,15 @@ conda create --name meuambientevirtual python=3.6
 REMOVER UM AMBIENTE VIRTUAL
 conda remove --name meuambientevirtual --all
 
-ATIVAR UM AIMBIENTE VIRTUAL
+ATIVAR UM AMBIENTE VIRTUAL
 conda activate meuambientevirtual
 cd nome_do_ambiente // cd Scripts // activate
 
-DESATIVAR UM ABIENTE VIRTUAL
+DESATIVAR UM AMBIENTE VIRTUAL
 conda deactivate
 cd nome_do_ambiente // cd Scripts // deactivate
 
 conda update -n base -c defaults conda
+
+*** LISTANDO OS AMBIENTES VIRTUAIS ***
+conda env list

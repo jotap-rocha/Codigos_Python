@@ -52,3 +52,7 @@ deixa a memória mais tranquila, não pesa tanto
 *** VALORES AUSENTES ***
 
 np.nan -> Transforma um item desejado em Not a Number
+
+*** DATA ***
+
+np.datetime_as_string(coluna, unit='D') -> Retorna a string da data formatada como ano, mês e dia

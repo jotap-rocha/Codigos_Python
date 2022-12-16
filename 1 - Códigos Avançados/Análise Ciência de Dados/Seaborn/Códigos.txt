@@ -59,6 +59,34 @@ palette=list ou dict) -> Gráfico de distribuição baseado na curva KDE (Kernel
 	- legend -> Legenda do gráfico
 	- palette -> Paleta de cores definidas por colormap
 
+sns.histplot(data=obj, x=obj, y=obj, hue=obj, weights=obj, stat=palavra-chave, bins=palavra-chave,
+discrete=bool, cumulative=bool, multiple=palavra-chave, element=palavra-chave, shrink=float, kde=bool, 
+cbar=bool, palette=array, color=list ou palavra-chave, legend=bool, ax=obj) -> Plota um histograma que pode
+ser estilizado de diferentes formas, com diferentes usos para estatística.
+
+	- data -> Dataframe
+	- x -> Coordenada x
+	- y -> Coordenada y
+	- hue -> Faz um agrupamento, comparação, diferenciando os dados por cor
+	- weights -> Faz uma diferença de tamanho para os pontos de dados
+	- stat -> Estatística agregada para cálculo. chave: 'count', 'frequency', 'probability', 'percent',
+	'density'
+	- bins -> Número de bins máximo (tamanho do intervalo das barras se não estou enganado)
+	- discrete -> Centraliza as barras de acordo com os seus pontos de dados (tipo um gráfico de barras)
+	- cumulative -> Plota a contagem cumulativa
+	- multiple -> Abordagem utilizada para visualizar as barras de diferentes formas, empilhadas, lado a 
+	lado, etc. Relevante apenas com dados univariados. chave: 'layer', 'dodge', 'stack' e 'fill'
+	- element -> Representação visual da estatística do histograma. Relevante apenas com dados univariados.
+	chave: 'bars', 'step' e 'poly'
+	- shrink -> Tamanho do espaçamento de uma barra para outra
+	- kde -> Plota a curva kde (kernel density estimate)
+	- cbar -> Adiciona uma barra de cores ao gráfico
+	- palette -> Método para mapear as cores do seu gráfico, você pode setar uma ordem específica, um
+	padrão (ambos através de listas de floats ou palavras-chaves) ou utilizar a paleta de cores do seaborn
+	- color -> Com única utilizada quando o parâmentro hue não é passado
+	- legend -> Plota legenda para o gráfico
+	- ax -> Seta em qual axes será gerado o gráfico
+
 sns.kdeplot(df, shade=bool) -> Plota um kde univariado
 
 	- shade -> Sombreamento

@@ -1,0 +1,14 @@
+Trata-se de funções internas da linguagem, que permitem sair do programa em execução. Recomenda-se usá-las
+apenas no interpretador, para testes dos script em desenvolvimento.
+
+Ex:
+
+lista = ['Azul', 'Vermelho', 'Amarelo', 'Verde', 'Cinza', 'Marrom']
+for cor in lista:
+    if cor == 'Amarelo':
+        print('Saindo...')
+        exit() ou quit()
+    print(cor)
+
+Ao testar o script, você verá que quando ele executar a linha de comando "exit()"(quit()), será exibida uma
+janela com opção para encerrar o precesso.

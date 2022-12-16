@@ -1,0 +1,16 @@
+<font color="blue">Seu texto</font> -> Irá gerar um texto na cor azul
+
+*** CORES ***
+
+red
+purple
+gray
+yellow
+brown
+black
+white
+orange
+grenn
+magenta
+
+Se há mais alguma, descubra por si mesmo :)

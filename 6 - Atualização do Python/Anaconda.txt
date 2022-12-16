@@ -1,0 +1,15 @@
+*** VERIFICANDO A VERSÃO ***
+
+No prompt do Anaconda: conda --version
+
+Se você executar: python --version, verá a versão do python que o seu anaconda está rodando
+
+*** ATUALIZANDO O ANACONDA ***
+
+Só consegui atualizar executando o seguinte comando, no prompt do Anaconda: conda install anaconda="versão"
+
+A mais recente, no momento em que estou escrevendo, 28/10/2022, é a 2022.10
+
+*** ATUALIZANDO O PYTHON DO ANACONDA ***
+
+No prompt do Anaconda, como administrador: conda update python ou conda install python="versão"

@@ -33,6 +33,7 @@ output: Retorna as linhas de 30 a 39 nas colunas 1,2 e 3, independente se a colu
 
 dataframe.set_index('coluna1',inplace=True) -> Utiliza a coluna do dataframe indicada para ser index
 dataframe['nome_do_index'] = dataframe.index -> Cria um index para o dataframe
+variavel = dataframe.reset_index() -> Quebra todos os índices e os transforma em colunas
 
 *** CAPTURANDO TRECHOS DE STRINGS DENTRO DAS COLUNAS ***
 

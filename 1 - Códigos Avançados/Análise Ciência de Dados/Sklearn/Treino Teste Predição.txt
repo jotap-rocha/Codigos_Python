@@ -1,14 +1,16 @@
 from sklearn.model_selection import train_test_split
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=int, train_size=float) -> Separa os dados
-de teste e treino, cruciais para o modelo. Lembrando que a ordem em que as variáveis estão dispostas é de suma
-importância, se alterar vai dar ruim na separação.
+x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=int, train_size=float, stratify=obj) -> 
+Separa os dados de teste e treino, cruciais para o modelo. Lembrando que a ordem em que as variáveis estão
+dispostas é de suma importância, se alterar vai dar ruim na separação.
 
 	- x -> Dados de x tanto de treino quanto de teste
 	- y -> Dados de y tanto de treino quanto de teste (o que você quer prever)
 	- random_state -> Também chamado de semente, é um parâmetro destinado a padronizar o seu modelo
 	- train_size -> Por padrão ele recebe .2 que significa 20%, ou seja, 20% da sua base será usada para
 	teste e 80% para treino. Este parâmetro pode ser mudado.
+	- stratify -> Separa uma proporção equivalente entre as variáveis de treino e teste, a fim de não
+	prejudicar o modelo no aprendizado. Recomendado quando você tiver uma base desbalanceada
 
 modelo.fit(x_train, y_train) -> Método para o modelo treinar em cima dos dados.
 modelo.predict(x_test) -> Realiza a previsão.

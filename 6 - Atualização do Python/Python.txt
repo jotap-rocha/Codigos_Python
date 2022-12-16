@@ -1,0 +1,10 @@
+*** VERIFICANDO A VERSÃO ***
+
+No cmd, digite: python --version
+
+Você verá qual versão do python está rodando na sua máquina
+
+*** ATUALIZANDO ***
+
+Acesse o link: https://www.python.org/ e baixe a versão mais recente, execute e adicione ao path. Ao final deste
+procedimento, seu python será atualizado

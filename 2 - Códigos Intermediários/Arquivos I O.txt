@@ -1,10 +1,10 @@
 PARA LER OU GRAVAR COISAS EM UM ARQUIVO DEVEMOS ABRI-LO USANDO A FUNÇÃO OPEN()
 
-variavel = open(nome_do_arquivo, modo_de_acesso, buffer-opcional)
+variavel = open(nome_do_arquivo, modo_de_acesso, buffer-opcional, encoding='text')
 
 OU
 
-with open('nome do arquivo.txt','modo_de_acesso') as variavel:
+with open('nome do arquivo.txt','modo_de_acesso', encoding='text') as variavel:
 	...
 	...
 
@@ -21,6 +21,9 @@ with open('nome do arquivo.txt','modo_de_acesso') as variavel:
 	ab -> Abre um arquivo para anexar em formato binário
 	a+ -> Abre um arquivo para anexar e ler
 	ab+ -> Abre um arquivo para anexar e ler em formato binário
+
+encoding -> Você pode passar uma opção de encoding para o Python ler o arquivo e, assim, conseguir extrair a
+informação adequada. Exemplo de encoding muito utilizados: utf-8 e latin_1
 
 variavel.write('texto a ser inserido no arquivo') -> Escreve algo no arquivo
 variavel.close() -> Fecha o arquivo

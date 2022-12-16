@@ -1,0 +1,46 @@
+2:01 PM 12/12/2022
+
+from dython.nominal import cramers_v
+
+A função cramers_v calcula a correlação entre duas variáveis categóricas nominais, através do coeficiente V de
+Cramer. Como iremos implementar esta função?
+
+Você terá que calcular um a um, pois ela não funciona para o seu dataframe inteiro, depois você monta a matriz.
+
+
+*** Siga o exemplo abaixo: ***
+
+
+
+def cramers_matrix(cat):   
+    '''
+    Calculates the Cramér's V correlation matrix.
+
+    Parameters
+    ----------
+    cat: categorical attributes from the data.
+        
+    Returns
+    -------
+    None 
+    '''
+    a1 = cramers_v(cat[cat.columns[0]], cat[cat.columns[0]])
+    a2 = cramers_v(cat[cat.columns[0]], cat[cat.columns[1]])
+    a3 = cramers_v(cat[cat.columns[0]], cat[cat.columns[2]])
+    a4 = cramers_v(cat[cat.columns[1]], cat[cat.columns[0]])
+    a5 = cramers_v(cat[cat.columns[1]], cat[cat.columns[1]])
+    a6 = cramers_v(cat[cat.columns[1]], cat[cat.columns[2]])
+    a7 = cramers_v(cat[cat.columns[2]], cat[cat.columns[0]])
+    a8 = cramers_v(cat[cat.columns[2]], cat[cat.columns[1]])
+    a9 = cramers_v(cat[cat.columns[2]], cat[cat.columns[2]])
+
+    matrix = pd.DataFrame({'state_holiday':[a1, a2, a3],
+                           'store_type':   [a4, a5, a6],
+                           'assortment':   [a7, a8, a9] })
+
+    matrix = matrix.set_index(matrix.columns)
+    
+    plt.figure(figsize=(20,12))
+    sns.heatmap(matrix, annot=True)
+    plt.show()    
+    return None

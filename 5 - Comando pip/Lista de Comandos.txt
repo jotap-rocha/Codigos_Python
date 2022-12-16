@@ -15,6 +15,11 @@ pip install biblioteca
 
 pip uninstall biblioteca
 
+*** VERIFICAR VERSÃO ***
+
+pip --version
+python -- version
+
 *** ATUALIZAÇÃO ***
 
 pip install --upgrade biblioteca

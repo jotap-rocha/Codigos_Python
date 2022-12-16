@@ -226,10 +226,11 @@ dentro do gráfico
 
 plt.clf() -> Limpa o gráfico
 plt.savefig('Nome do arquivo.png') -> Salva o gráfico
-fig.savefig('Nome do arquivo.png', format='palavra-chave', dpi=int) -> Salva o gráfico
+fig.savefig('Nome do arquivo.png', format='palavra-chave', dpi=int, transparent=bool) -> Salva o gráfico
 
 	- format -> Formato do arquivo, sugerido png, melhor qualidade
 	- dpi -> Qualidade de visualização da imagem, recomendado 300
+	- transparent -> Deixa o fundo do gráfico transparente e não atrapalha ao alocar o gráfico no ppt
 
 *** OUTRAS CONFIGURAÇÕES ***
 

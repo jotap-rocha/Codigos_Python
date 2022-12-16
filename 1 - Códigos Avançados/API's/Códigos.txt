@@ -1,0 +1,5 @@
+import requests # Requisita os dados da API
+import json # Trata as informações recebidas da AP
+
+requests.get('url') -> Realiza uma requisição no link passado
+variavel.json() -> Traduz a requisição para o python, torna-se dicionários

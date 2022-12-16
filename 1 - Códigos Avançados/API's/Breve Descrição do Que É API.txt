@@ -1,0 +1,4 @@
+API nada mais é do que uma forma de capturar informações de algum site de forma facilitada.
+
+As API's possibilitam muitas coisas, automação de tarefas, obtenção de dados para algum estudo, e,
+principalmente, facilidade.

@@ -7,3 +7,7 @@ para juntar itens dentro de um dataframe.
 	COLUNA2 -> Será a coluna onde aplicaremos alguma função para dar resultado ao groupby.
 	AGG -> Onde passamos funções a serem aplicadas. Pode ser passado uma lista de função.
 	- as_index -> Transforma as colunas clusterizadas em colunas normais.
+
+
+Em um groupby que gera multi index, o recomendável é transformar os índices em coluna com o .reset_index(),
+fica mais fácil de visualizar

@@ -28,8 +28,8 @@ sorted(lista) -> Gera uma lista ordenada de forma crescente
 
 REMOVER
 lista.clear() -> Limpa a lista
-del lista(3) -> Deletar o item, na posição 3, da lista. Útil quando sabemos a 
-posição do elemento
+del lista[3] -> Deletar o item, na posição 3, da lista. Útil quando sabemos a 
+posição do elemento. Lembrando que as listas começam com a posição 0
 lista.pop() -> Deleta o último item da lista, porém você pode passar uma posição
 específica para ser retirada
 lista.remove('elemento') -> Indica o item a ser eliminado, útil quando não sabemos

@@ -1,0 +1,24 @@
+*** INICIANDO CONEXÃO ***
+
+conexao = db.connect(Driver='{SQL Server Native Client 11.0}', -> Driver padrão para SQL Server
+                     Server='servidor', 		       -> Nome do servidor
+                     Database='base de dados', 		       -> Base de dados
+                     UID='login', 			       -> Login, se necessário
+                     PWD='senha')			       -> Senha, se necessário
+
+print('Conexão bem sucedida!')
+
+cursor = conexão.cursor() -> Cria o cursor, objeto mediador entre você e o banco, ele é quem irá realizar as
+querys
+
+*** EXECUTANDO UMA QUERY ***
+
+base = pd.read_sql('query igual no SQL', conexao)
+conexao.commit() -> Aqui você confirma que irá realizar a query
+cursor.close() -> Encerra o cursor
+conexao.close() -> Encerra a conexão com o banco
+print('Carga completa e conexão finalizada!')
+
+*** DRIVERS ***
+
+print(pyodbc.drivers()) -> Você confere os drivers que existem no seu computador
